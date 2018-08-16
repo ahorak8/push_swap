@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/16 15:25:54 by ahorak            #+#    #+#             */
-/*   Updated: 2018/08/16 15:25:56 by ahorak           ###   ########.fr       */
+/*   Created: 2018/08/16 15:47:56 by ahorak            #+#    #+#             */
+/*   Updated: 2018/08/16 18:19:05 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "../includes/push_swap.h"
 
 int		main(int argc, char **argv)
 {
 	t_list	*list_a;
 	t_list	*list_b;
-
+	
 	if (argc > 1)
 	{
 		list_a = ft_list_new();

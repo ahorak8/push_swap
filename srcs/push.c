@@ -6,7 +6,7 @@
 /*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/15 15:25:43 by ahorak            #+#    #+#             */
-/*   Updated: 2018/08/15 15:28:13 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/08/16 18:18:58 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	pa(t_list *list_a, t_list *list_b)
 	{
 		ft_list_prepend(list_a, list_b->head->data);
 		ft_list_del(list_b, list_b->head);
-		ft_putstr("pa");
+		write(1, "pa\n", 3);
 	}
 }
 
@@ -28,6 +28,6 @@ void	pb(t_list *list_b, t_list *list_a)
 	{
 		ft_list_prepend(list_b, list_a->head->data);
 		ft_list_del(list_a, list_a->head);
-		ft_putstr("pb");
+		write(1, "pb\n", 3);
 	}
 }
