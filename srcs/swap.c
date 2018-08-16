@@ -6,8 +6,9 @@
 /*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 15:33:20 by ahorak            #+#    #+#             */
-/*   Updated: 2018/08/16 15:33:21 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/08/16 18:30:22 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "../includes/push_swap.h"
+
