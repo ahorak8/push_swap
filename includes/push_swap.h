@@ -16,5 +16,8 @@
 
 void	pa(t_list *list_a, t_list *list_b);
 void	pb(t_list *list_b, t_list *list_a);
+void	ra(t_list *list_a);
+void	rb(t_list *list_b);
+void	rr(t_list *list_a, t_list *list_b);
 
 #endif
