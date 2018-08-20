@@ -6,7 +6,7 @@
 /*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/15 16:24:20 by ahorak            #+#    #+#             */
-/*   Updated: 2018/08/15 16:35:47 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/08/21 00:18:12 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,8 @@ void	pb(t_list *list_b, t_list *list_a);
 void	ra(t_list *list_a);
 void	rb(t_list *list_b);
 void	rr(t_list *list_a, t_list *list_b);
+void	sa(t_list *list_a);
+void	sb(t_list *list_b);
+void	ss(t_list *list_a, t_list *list_b);
 
 #endif
