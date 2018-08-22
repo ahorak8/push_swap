@@ -12,7 +12,7 @@
 
 #include "includes/libft.h"
 
-t_list	*list_del(t_list *list, t_node *node)
+t_list	*ft_list_del(t_list *list, t_node *node)
 {
 	if (node->next == NULL && node->prev == NULL)
 	{

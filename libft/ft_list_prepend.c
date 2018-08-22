@@ -12,7 +12,7 @@
 
 #include "includes/libft.h"
 
-t_list	*list_prepend(t_list *list, int val)
+t_list	*ft_list_prepend(t_list *list, int val)
 {
 	t_node	*node;
 

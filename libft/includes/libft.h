@@ -179,9 +179,9 @@ void					ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int						get_next_line(const int fd, char **line);
 
-t_list					*list_new(void);
-t_list					*list_append(t_list *list, int val);
-t_list					*list_prepend(t_list *list, int val);
-t_list					*list_del(t_list *list, t_node *node);
+t_list					*ft_list_new(void);
+t_list					*ft_list_append(t_list *list, int val);
+t_list					*ft_list_prepend(t_list *list, int val);
+t_list					*ft_list_del(t_list *list, t_node *node);
 
 #endif

@@ -12,7 +12,7 @@
 
 #include "includes/libft.h"
 
-t_list	*list_new(void)
+t_list	*ft_list_new(void)
 {
 	t_list	*new;
 

@@ -76,7 +76,12 @@ int		main(int argc, char **argv)
 	{
 		list_a = ft_list_new();
 		list_b = ft_list_new();
-		while (*argv)
+		//if ((is_duplicates(argc, argv)) == 0)
+		//{
+			//write(1, "Error\n", 6);
+			//exit(1);
+		//}
+		while (*argv) //filling list_a
 		{
 			list_a = ft_list_append(list_a, ft_atoi(*argv));
 			argv++;
