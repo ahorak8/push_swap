@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+#include <stdio.h>
 
 int		is_not_digit(char *str)
 {
@@ -68,6 +69,7 @@ int		main(int argc, char **argv)
 			write(1, "Error: Duplicates.\n", 19);
 			exit(1);
 		}
+		argv++;
 		while (*argv) //filling list_a
 		{
 			if (ft_atoi(*argv) > 2147483647 || ft_atoi(*argv) < -2147483647)

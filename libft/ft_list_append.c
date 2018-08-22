@@ -22,7 +22,7 @@ t_list	*ft_list_append(t_list *list, int val)
 		if (node != NULL)
 		{
 			node->data = val;
-			list->next = NULL;
+			node->next = NULL;
 			if (list->tail == NULL)
 			{
 				node->prev = NULL;

@@ -15,6 +15,7 @@
 int		is_sorted(t_list *list_a)
 {
 	t_node	*node;
+	int		i = 0;
 
 	node = list_a->head;
 	if (list_a->head->data == list_a->tail->data)
@@ -23,8 +24,7 @@ int		is_sorted(t_list *list_a)
 	{
 		if (node->data > node->next->data)
 			return (0);
-		else
-			node = node->next;
+		node = node->next;
 	}
 	return (1);
 }
