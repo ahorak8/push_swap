@@ -21,8 +21,9 @@ int		is_not_digit(char *str)
 		i++;
 	while (str[i])
 	{
-        	if (str[i] != '-' && str[i] != '+' && (!(ft_isdigit(str[i]))) && (!(ft_isspace(str[i]))))
-		    return (0);
+		if (str[i] != '-' && str[i] != '+' && \
+		(!(ft_isdigit(str[i]))) && (!(ft_isspace(str[i]))))
+			return (0);
 		i++;
 	}
 	return (1);
@@ -39,7 +40,7 @@ int		is_duplicates(int ac, char **av)
 	{
 		test = ft_atoi(av[i]);
 		j = i;
-		while (j < argc - 1)
+		while (j < ac - 1)
 		{
 			if (test == ft_atoi(av[j + 1]))
 				return (0);
@@ -70,7 +71,7 @@ int		main(int argc, char **argv)
 {
 	t_list	*list_a;
 	t_list	*list_b;
-	
+
 	if (argc > 1)
 	{
 		list_a = ft_list_new();
@@ -80,7 +81,7 @@ int		main(int argc, char **argv)
 			list_a = ft_list_append(list_a, ft_atoi(*argv));
 			argv++;
 		}
-		// push_swap or inputted instructions
+		// read push_swap outputs or read inputted instructions
 		if (is_sorted(list_a))
 			write(1, "OK\n", 3);
 		else

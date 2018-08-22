@@ -25,49 +25,48 @@ void	sa(t_list *list_a)
 		node->next = list_a->head->next;
 		list_a->head->next = node;
 		node->next->prev = node;
-		write(1, "sa\n", 3);
 	}
 }
 
-void    sb(t_list *list_b)
+void	sb(t_list *list_b)
 {
-        if (!(list_b == NULL || list_b->head == NULL || list_b->head->next == NULL))
-        {
-                t_node  *node;
+	if (!(list_b == NULL || list_b->head == NULL || \
+	list_b->head->next == NULL))
+	{
+		t_node	*node;
 
-                node = list_b->head;
-                list_b->head = node->next;
-                list_b->head->prev = NULL;
-                node->prev = list_b->head;
-                node->next = list_b->head->next;
-                list_b->head->next = node;
-                node->next->prev = node;
-                write(1, "sb\n", 3);
-        }
+		node = list_b->head;
+		list_b->head = node->next;
+		list_b->head->prev = NULL;
+		node->prev = list_b->head;
+		node->next = list_b->head->next;
+		list_b->head->next = node;
+		node->next->prev = node;
+	}
 }
 
-void	ss(t_list *list_a, t_list list_b)
+void	ss(t_list *list_a, t_list *list_b)
 {
-	if (!(list_a == NULL || list_a->head == NULL || list_a->head->next == NULL) && \
-!(list_b == NULL || list_b->head == NULL || list_b->head->next == NULL))
+	if (!(list_a == NULL || list_a->head == NULL || \
+	list_a->head->next == NULL) && !(list_b == NULL || \
+	list_b->head == NULL || list_b->head->next == NULL))
 	{
-		t_node 	*node_a;
+		t_node	*node_a;
 		t_node	*node_b;
 
 		node_a = list_a->head;
-                list_a->head = node_a->next;
-                list_a->head->prev = NULL;
-                node_a->prev = list_a->head;
-                node_a->next = list_a->head->next;
-                list_a->head->next = node_a;
-                node->next->prev = node_a;
+		list_a->head = node_a->next;
+		list_a->head->prev = NULL;
+		node_a->prev = list_a->head;
+		node_a->next = list_a->head->next;
+		list_a->head->next = node_a;
+		node_a->next->prev = node_a;
 		node_b = list_b->head;
-                list_b->head = node_b->next;
-                list_b->head->prev = NULL;
-                node_b->prev = list_b->head;
-                node_b->next = list_b->head->next;
-                list_b->head->next = node_b;
-                node->next->prev = node_b;
-		write(1, "ss\n", 3);
+		list_b->head = node_b->next;
+		list_b->head->prev = NULL;
+		node_b->prev = list_b->head;
+		node_b->next = list_b->head->next;
+		list_b->head->next = node_b;
+		node_b->next->prev = node_b;
 	}
 }

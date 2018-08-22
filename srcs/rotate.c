@@ -15,22 +15,19 @@
 void	ra(t_list *list_a)
 {
 	ft_list_append(list_a, list_a->head->data);
-	ft_list_del(list_a, list->head);
-	write(1, "ra\n", 3);
+	ft_list_del(list_a, list_a->head);
 }
 
 void	rb(t_list *list_b)
 {
 	ft_list_append(list_b, list_b->head->data);
-	ft_list_del(list_b, list->head);
-	write(1, "rb\n", 3);
+	ft_list_del(list_b, list_b->head);
 }
 
 void	rr(t_list *list_a, t_list *list_b)
 {
 	ft_list_append(list_a, list_a->head->data);
-	ft_list_del(list_a, list->head);
+	ft_list_del(list_a, list_a->head);
 	ft_list_append(list_b, list_b->head->data);
-	ft_list_del(list_b, list->head);
-	write(1, "rr\n", 3);
+	ft_list_del(list_b, list_b->head);
 }

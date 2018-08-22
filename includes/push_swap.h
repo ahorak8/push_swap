@@ -12,7 +12,7 @@
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-# include "../../libft/includes/libft.h"
+# include "../libft/includes/libft.h"
 
 void	pa(t_list *list_a, t_list *list_b);
 void	pb(t_list *list_b, t_list *list_a);
@@ -22,5 +22,8 @@ void	rr(t_list *list_a, t_list *list_b);
 void	sa(t_list *list_a);
 void	sb(t_list *list_b);
 void	ss(t_list *list_a, t_list *list_b);
+void	rra(t_list *list_a);
+void	rrb(t_list *list_b);
+void	rrr(t_list *list_a, t_list *list_b);
 
 #endif

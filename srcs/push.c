@@ -18,7 +18,6 @@ void	pa(t_list *list_a, t_list *list_b)
 	{
 		ft_list_prepend(list_a, list_b->head->data);
 		ft_list_del(list_b, list_b->head);
-		write(1, "pa\n", 3);
 	}
 }
 
@@ -28,6 +27,5 @@ void	pb(t_list *list_b, t_list *list_a)
 	{
 		ft_list_prepend(list_b, list_a->head->data);
 		ft_list_del(list_a, list_a->head);
-		write(1, "pb\n", 3);
 	}
 }
