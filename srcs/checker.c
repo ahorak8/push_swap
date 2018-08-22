@@ -69,11 +69,11 @@ int		is_sorted(t_list *list_a)
 
 int		main(int argc, char **argv)
 {
-	t_list	*list_a;
-	t_list	*list_b;
-
 	if (argc > 1)
 	{
+		t_list	*list_a;
+		t_list	*list_b;
+
 		list_a = ft_list_new();
 		list_b = ft_list_new();
 		//if ((is_duplicates(argc, argv)) == 0)
