@@ -51,24 +51,11 @@ int		is_duplicates(int ac, char **av)
 	return (1);
 }
 
-int		is_sorted(t_list *list_a)
-{
-	t_node	*node;
-
-	node = list_a->head;
-	if (list_a->head->data == list_a->tail->data)
-		return (1);
-	while (node->next != NULL)
-	{
-		if (node->data > node->next->data)
-			return (0);
-		node = node->next;
-	}
-	return (1);
-}
-
 int		main(int argc, char **argv)
 {
+	int i;
+
+	i = 0;
 	if (argc > 1)
 	{
 		t_list	*list_a;
@@ -76,17 +63,22 @@ int		main(int argc, char **argv)
 
 		list_a = ft_list_new();
 		list_b = ft_list_new();
-		//if ((is_duplicates(argc, argv)) == 0)
-		//{
-			//write(1, "Error\n", 6);
-			//exit(1);
-		//}
+		if ((is_duplicates(argc, argv)) == 0)
+		{
+			write(1, "Error: Duplicates.\n", 19);
+			exit(1);
+		}
 		while (*argv) //filling list_a
 		{
+			if (ft_atoi(*argv) > 2147483647 || ft_atoi(*argv) < -2147483647)
+			{
+				write(1, "Error: Greater than MAXINT\n", 27);
+				exit(1);
+			}
 			list_a = ft_list_append(list_a, ft_atoi(*argv));
 			argv++;
 		}
-		// read push_swap outputs or read inputted instructions
+		// read push_swap outputted instructions or read inputted instructions
 		if (is_sorted(list_a))
 			write(1, "OK\n", 3);
 		else

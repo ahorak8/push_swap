@@ -15,9 +15,9 @@ NAME_2 = push_swap
 
 FLAGS = -Wall -Werror -Wextra -I includes
 
-SRCS_1 = srcs/checker.c srcs/push.c srcs/swap.c srcs/rotate.c srcs/reverse_rotate.c 
+SRCS_1 = srcs/checker.c srcs/push.c srcs/swap.c srcs/rotate.c srcs/reverse_rotate.c srcs/is_sorted.c
 
-SRCS_2 = srcs/push_swap.c srcs/push.c srcs/swap.c srcs/rotate.c srcs/reverse_rotate.c  
+SRCS_2 = srcs/push_swap.c srcs/push.c srcs/swap.c srcs/rotate.c srcs/reverse_rotate.c srcs/is_sorted.c 
 
 OBJ_1 = $(SRCS_1:.c=.o)
 OBJ_2 = $(SRCS_2:.c=.o)

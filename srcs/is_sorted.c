@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/16 15:25:54 by ahorak            #+#    #+#             */
-/*   Updated: 2018/08/16 18:30:40 by ahorak           ###   ########.fr       */
+/*   Created: 2018/08/22 18:16:25 by ahorak            #+#    #+#             */
+/*   Updated: 2018/08/22 18:34:25 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int		main(int argc, char **argv)
+int		is_sorted(t_list *list_a)
 {
-	t_list	*list_a;
-	t_list	*list_b;
+	t_node	*node;
 
-	if (argc > 1)
+	node = list_a->head;
+	if (list_a->head->data == list_a->tail->data)
+		return (1);
+	while (node->next != NULL)
 	{
-		list_a = ft_list_new();
-		list_b = ft_list_new();
-		while (*argv)
-		{
-			list_a = ft_list_append(list_a, ft_atoi(*argv));
-			argv++;
-		}
-		if (is_sorted(list_a))
-			exit(1);
+		if (node->data > node->next->data)
+			return (0);
 		else
-			exit(1); //algo to output instructions
+			node = node->next;
 	}
-	else
-		exit(1);
+	return (1);
 }

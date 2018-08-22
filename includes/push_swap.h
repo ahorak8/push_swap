@@ -14,6 +14,8 @@
 # define PUSH_SWAP_H
 # include "../libft/includes/libft.h"
 
+int		is_sorted(t_list *list_a);
+
 void	pa(t_list *list_a, t_list *list_b);
 void	pb(t_list *list_b, t_list *list_a);
 void	ra(t_list *list_a);
