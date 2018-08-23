@@ -12,16 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-void	receive_instructions(t_list *list_a, t_list *list_b)
-{
-	char	*str;
-
-	while (get_next_line(0, &str))
-	{
-		check_instructions(*str, list_a, list_b);
-	}
-}
-
 void	check_instructions(char *str, t_list *list_a, t_list *list_b)
 {
 	if (ft_strcmp(str, "pa") == 0)
@@ -46,6 +36,14 @@ void	check_instructions(char *str, t_list *list_a, t_list *list_b)
 		rrb(list_b);
 	if (ft_strcmp(str, "rrr") == 0)
 		rrr(list_a, list_b);
-	else
-		error();
+}
+
+void	receive_instructions(t_list *list_a, t_list *list_b)
+{
+	char	*str;
+
+	while (get_next_line(0, &str))
+	{
+		check_instructions(str, list_a, list_b);
+	}
 }
