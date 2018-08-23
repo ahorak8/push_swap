@@ -6,12 +6,11 @@
 /*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 15:47:56 by ahorak            #+#    #+#             */
-/*   Updated: 2018/08/20 23:58:07 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/08/23 20:30:54 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include <stdio.h>
 
 int		is_not_digit(char *str)
 {
@@ -75,14 +74,13 @@ void	error_check(int argc, char **argv)
 
 int		main(int argc, char **argv)
 {
-	int i;
+	int		i;
 	t_list	*list_a;
 	t_list	*list_b;
 
 	i = 0;
 	if (argc > 1)
 	{
-
 		list_a = ft_list_new();
 		list_b = ft_list_new();
 		error_check(argc, argv);
@@ -92,7 +90,8 @@ int		main(int argc, char **argv)
 			list_a = ft_list_append(list_a, ft_atoi(*argv));
 			argv++;
 		}
-		// read push_swap outputted instructions or read inputted instructions
+		receive_instructions(list_a, list_b);
+		// read inputted instructions
 		if (is_sorted(list_a))
 			write(1, "OK\n", 3);
 		else
