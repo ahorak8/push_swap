@@ -21,6 +21,7 @@ int		main(int argc, char **argv)
 	{
 		list_a = ft_list_new();
 		list_b = ft_list_new();
+		argv++;
 		while (*argv)
 		{
 			list_a = ft_list_append(list_a, ft_atoi(*argv));

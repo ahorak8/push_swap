@@ -24,10 +24,10 @@ int		is_not_digit(char *str)
 	{
 		if (str[i] != '-' && str[i] != '+' && \
 		(!(ft_isdigit(str[i]))) && (!(ft_isspace(str[i]))))
-			return (0);
+			return (1);
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
 int		is_duplicates(int ac, char **av)
@@ -44,39 +44,51 @@ int		is_duplicates(int ac, char **av)
 		while (j < ac - 1)
 		{
 			if (test == ft_atoi(av[j + 1]))
-				return (0);
+				return (1);
 			j++;
 		}
 		i++;
 	}
-	return (1);
+	return (0);
+}
+
+void	error(void)
+{
+	write(1, "Error\n", 6);
+	exit(1);
+}
+
+void	error_check(int argc, char **argv)
+{
+	if ((is_duplicates(argc, argv)) == 1)
+		error();
+	argv++;
+	while (*argv)
+	{
+		if (ft_atoi(*argv) > 2147483647 || ft_atoi(*argv) < -2147483647)
+			error();
+		if ((is_not_digit(*argv)) == 1)
+			error();
+		argv++;
+	}
 }
 
 int		main(int argc, char **argv)
 {
 	int i;
+	t_list	*list_a;
+	t_list	*list_b;
 
 	i = 0;
 	if (argc > 1)
 	{
-		t_list	*list_a;
-		t_list	*list_b;
 
 		list_a = ft_list_new();
 		list_b = ft_list_new();
-		if ((is_duplicates(argc, argv)) == 0)
-		{
-			write(1, "Error: Duplicates.\n", 19);
-			exit(1);
-		}
+		error_check(argc, argv);
 		argv++;
-		while (*argv) //filling list_a
+		while (*argv)
 		{
-			if (ft_atoi(*argv) > 2147483647 || ft_atoi(*argv) < -2147483647)
-			{
-				write(1, "Error: Greater than MAXINT\n", 27);
-				exit(1);
-			}
 			list_a = ft_list_append(list_a, ft_atoi(*argv));
 			argv++;
 		}
