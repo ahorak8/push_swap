@@ -50,9 +50,9 @@ void	ss(t_list *list_a, t_list *list_b)
 	t_node	*node_a;
 	t_node	*node_b;
 
-	if (!(list_a == NULL || list_a->head == NULL || \
-	list_a->head->next == NULL) && !(list_b == NULL || \
-	list_b->head == NULL || list_b->head->next == NULL))
+	if ((list_a != NULL || list_a->head != NULL || \
+	list_a->head->next != NULL) && (list_b != NULL && \
+	list_b->head != NULL && list_b->head->next != NULL))
 	{
 		node_a = list_a->head;
 		list_a->head = node_a->next;
