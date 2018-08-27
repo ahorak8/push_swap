@@ -12,6 +12,15 @@
 
 #include "../includes/push_swap.h"
 
+void	select_algos(int len, t_list *list_a, t_list *list_b)
+{
+	len = len - 1;
+	if (len == 2)
+		algos_len2(list_a, list_b);
+	if (len == 3)
+		algos_len3(list_a, list_b);
+}
+
 int		main(int argc, char **argv)
 {
 	t_list	*list_a;
@@ -28,9 +37,9 @@ int		main(int argc, char **argv)
 			argv++;
 		}
 		if (is_sorted(list_a, list_b))
-			exit(1);
+			exit();
 		else
-			exit(1); //algo to output instructions
+			select_algos(argc, list_a, list_b);
 	}
 	else
 		exit(1);
