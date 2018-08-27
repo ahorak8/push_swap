@@ -38,7 +38,7 @@ void	check_instructions(char *str, t_list *list_a, t_list *list_b)
 		rrr(list_a, list_b);
 }
 
-void	receive_instructions(t_list *list_a, t_list *list_b)
+t_list		*receive_instructions(t_list *list_a, t_list *list_b)
 {
 	char	*str;
 
@@ -46,4 +46,5 @@ void	receive_instructions(t_list *list_a, t_list *list_b)
 	{
 		check_instructions(str, list_a, list_b);
 	}
+	return(list_a);
 }
