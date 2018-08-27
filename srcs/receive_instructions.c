@@ -36,9 +36,11 @@ void	check_instructions(char *str, t_list *list_a, t_list *list_b)
 		rrb(list_b);
 	if (ft_strcmp(str, "rrr") == 0)
 		rrr(list_a, list_b);
+	else
+		error();
 }
 
-t_list		*receive_instructions(t_list *list_a, t_list *list_b)
+void	receive_instructions(t_list *list_a, t_list *list_b)
 {
 	char	*str;
 
@@ -46,5 +48,4 @@ t_list		*receive_instructions(t_list *list_a, t_list *list_b)
 	{
 		check_instructions(str, list_a, list_b);
 	}
-	return(list_a);
 }

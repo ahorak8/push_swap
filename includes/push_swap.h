@@ -15,7 +15,8 @@
 # include "../libft/includes/libft.h"
 
 int		is_sorted(t_list *list_a, t_list *list_b);
-t_list	*receive_instructions(t_list *list_a, t_list *list_b);
+void	receive_instructions(t_list *list_a, t_list *list_b);
+void	error(void);
 
 void	pa(t_list *list_a, t_list *list_b);
 void	pb(t_list *list_b, t_list *list_a);
