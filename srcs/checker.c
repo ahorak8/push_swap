@@ -91,7 +91,7 @@ int		main(int argc, char **argv)
 			argv++;
 		}
 		receive_instructions(list_a, list_b);
-		if (is_sorted(list_a))
+		if (is_sorted(list_a, list_b))
 			write(1, "OK\n", 3);
 		else
 			write(1, "KO\n", 3);

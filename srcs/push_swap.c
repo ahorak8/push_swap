@@ -27,7 +27,7 @@ int		main(int argc, char **argv)
 			list_a = ft_list_append(list_a, ft_atoi(*argv));
 			argv++;
 		}
-		if (is_sorted(list_a))
+		if (is_sorted(list_a, list_b))
 			exit(1);
 		else
 			exit(1); //algo to output instructions

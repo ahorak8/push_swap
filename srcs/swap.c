@@ -24,7 +24,6 @@ void	sa(t_list *list_a)
 		node->prev = list_a->head;
 		node->next = list_a->head->next;
 		list_a->head->next = node;
-		//node->next->prev = node;
 	}
 }
 
@@ -41,7 +40,6 @@ void	sb(t_list *list_b)
 		node->prev = list_b->head;
 		node->next = list_b->head->next;
 		list_b->head->next = node;
-		//node->next->prev = node;
 	}
 }
 
