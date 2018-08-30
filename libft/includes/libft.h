@@ -128,6 +128,7 @@ char					*ft_strnstr(const char *s1, const char *s2, size_t n);
 int						ft_strcmp(const char *s1, const char *s2);
 int						ft_strncmp(const char *s1, const char *s2, size_t n);
 int						ft_atoi(const char *str);
+long					ft_atol(const char *str);
 int						ft_countwords(char const *str, char c);
 int						get_next_line(const int fd, char **line);
 

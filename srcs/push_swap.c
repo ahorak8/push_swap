@@ -37,7 +37,7 @@ int		main(int argc, char **argv)
 			argv++;
 		}
 		if (is_sorted(list_a, list_b))
-			exit();
+			exit(1);
 		else
 			select_algos(argc, list_a, list_b);
 	}

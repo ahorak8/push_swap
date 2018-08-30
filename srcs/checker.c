@@ -64,7 +64,7 @@ void	error_check(int argc, char **argv)
 	argv++;
 	while (*argv)
 	{
-		if (ft_atoi(*argv) > 2147483647 || ft_atoi(*argv) < -2147483647)
+		if (ft_atol(*argv) > 2147483647 || ft_atol(*argv) < -2147483647)
 			error();
 		if ((is_not_digit(*argv)) == 1)
 			error();
