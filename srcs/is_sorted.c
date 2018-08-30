@@ -18,7 +18,7 @@ int		is_sorted(t_list *list_a, t_list *list_b)
 
 	node = list_a->head;
 	if (list_a->head->data == list_a->tail->data)
-		if (list_b == NULL)
+		if (list_b->head == NULL)
 			return (1);
 	while (node->next != NULL)
 	{
@@ -26,7 +26,7 @@ int		is_sorted(t_list *list_a, t_list *list_b)
 			return (0);
 		node = node->next;
 	}
-	if (list_b != NULL)
+	if (list_b->head != NULL)
 		return (0);
 	else
 		return (1);

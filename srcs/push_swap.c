@@ -19,6 +19,10 @@ void	select_algos(int len, t_list *list_a, t_list *list_b)
 		algos_len2(list_a, list_b);
 	if (len == 3)
 		algos_len3(list_a, list_b);
+	if (len == 5)
+		algos_len5(list_a, list_b);
+	else
+		write(1, "boop", 4);
 }
 
 int		main(int argc, char **argv)

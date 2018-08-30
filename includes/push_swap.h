@@ -32,5 +32,6 @@ void	rrr(t_list *list_a, t_list *list_b);
 
 void	algos_len2(t_list *list_a, t_list *list_b);
 void	algos_len3(t_list *list_a, t_list *list_b);
+void	algos_len5(t_list *list_a, t_list *list_b);
 
 #endif
