@@ -21,8 +21,7 @@ void	select_algos(int len, t_list *list_a, t_list *list_b)
 		algos_len3(list_a, list_b);
 	if (len == 5)
 		algos_len5(list_a, list_b);
-	else
-		write(1, "boop", 4);
+	// else small, med, or large stack algos
 }
 
 int		main(int argc, char **argv)

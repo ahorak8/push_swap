@@ -17,7 +17,7 @@ void	algos_len2(t_list *list_a, t_list *list_b)
 	if (list_a->head->data > list_a->head->next->data)
 	{
 		sa(list_a);
-		write(1, "sa\n", 3);
+		write(1, "sa\n", 4);
 	}
 }
 
