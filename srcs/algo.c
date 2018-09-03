@@ -33,15 +33,32 @@ void	algos_len3(t_list *list_a, t_list *list_b)
 			write(1, "sa\n", 3);
 		}
 	}
-
+	else if (list_a->head->data > list_a->head->next->data)
+	{
+		if (list_a->head->data > list_a->tail->data)
+		{
+			ra(list_a);
+			write(1, "ra\n", 3);
+			if (is_sorted(list_a, list_b) == 0)
+			{
+				sa(list_a);
+				write(1, "sa\n", 3);
+			}
+		}
+		else
+		{
+				sa(list_a);
+				write(1, "sa\n", 3);
+			}
+	}
 }
 
 void	algos_len5(t_list *list_a, t_list *list_b)
 {
 	if (list_a->head->data > list_a->head->next->data && \
-			list_a->head->next->data > list_a->head->next->next->data && \
-			list_a->head->next->next->data > list_a->head->next->next->next->data && \
-			list_a->tail->data < list_a->head->next->next->next->data)
+	list_a->head->next->data > list_a->head->next->next->data && \
+	list_a->head->next->next->data > list_a->head->next->next->next->data && \
+	list_a->tail->data < list_a->head->next->next->next->data)
 	{
 		pb(list_a, list_b);
 		write(1, "pb\n", 3);
