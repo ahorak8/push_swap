@@ -49,6 +49,7 @@ typedef struct			s_list
 	t_node				*head;
 	t_node				*tail;
 }						t_list;
+
 typedef unsigned char		t_byte;
 
 typedef struct			s_precision

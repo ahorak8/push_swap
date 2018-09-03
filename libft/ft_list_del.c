@@ -27,7 +27,7 @@ t_list	*ft_list_del(t_list *list, t_node *node)
 	else if (node->next == NULL)
 	{
 		list->tail = node->prev;
-		list->tail->prev = node->prev;
+		list->tail->next = NULL;
 	}
 	else
 	{
