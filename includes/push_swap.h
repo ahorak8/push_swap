@@ -39,6 +39,6 @@ void	algos_len5(t_list *list_a, t_list *list_b);
 void	algos_small(t_list *list_a, t_list *list_b);
 void	algos_med(t_list *list_a, t_list *list_b);
 void	algos_large(t_list *list_a, t_list *list_b);
-void	algos_backwards(t_list *list_a, t_list *list_b);
+void	algos_backwards(int len, t_list *list_a, t_list *list_b);
 
 #endif

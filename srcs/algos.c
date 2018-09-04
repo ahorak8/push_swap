@@ -14,8 +14,7 @@
 
 void	algos_small(t_list *list_a, t_list *list_b)
 {
-	if (is_backwards_list(list_a) == 1)
-		algos_backwards(list_a, list_b);
+
 }
 
 void	algos_med(t_list *list_a, t_list *list_b)

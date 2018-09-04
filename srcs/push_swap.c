@@ -19,6 +19,8 @@ void	select_algos(int len, t_list *list_a, t_list *list_b)
 		algos_len2(list_a, list_b);
 	if (len == 3)
 		algos_len3(list_a, list_b);
+	if (is_backwards_list(list_a) == 1)
+		algos_backwards(len, list_a, list_b);
 	if (len == 5)
 		algos_len5(list_a, list_b);
 	if (len > 5 && len <= 10)
@@ -36,6 +38,7 @@ int		main(int argc, char **argv)
 
 	if (argc > 1)
 	{
+		error_check(argc, argv);
 		list_a = ft_list_new();
 		list_b = ft_list_new();
 		argv++;

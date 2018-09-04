@@ -81,9 +81,9 @@ int		main(int argc, char **argv)
 	i = 0;
 	if (argc > 1)
 	{
+		error_check(argc, argv);
 		list_a = ft_list_new();
 		list_b = ft_list_new();
-		error_check(argc, argv);
 		argv++;
 		while (*argv)
 		{
