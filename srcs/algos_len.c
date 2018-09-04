@@ -49,22 +49,5 @@ void	algos_len4(t_list *list_a, t_list *list_b)
 		sa_print(list_a);
 	}
 	else
-		write(1, "algos", 4);
-}
-
-void	algos_len5(t_list *list_a, t_list *list_b)
-{
-	if (is_backwards_list(list_a) == 1) 
-	{
-		pb_print(list_a, list_b);
-		pb_print(list_a, list_b);
-		sa_print(list_a);
-		rra_print(list_a);
-		pa_print(list_a, list_b);
-		ra_print(list_a);
-		pa_print(list_a, list_b);
-		ra_print(list_a);
-	}
-	else
-		write(1, "algos", 4);
+		algos_small(list_a, list_b);
 }
