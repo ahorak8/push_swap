@@ -30,7 +30,7 @@ void	rra(t_list *list_a);
 void	rrb(t_list *list_b);
 void	rrr(t_list *list_a, t_list *list_b);
 
-void	is_backwards_list(t_list *list_a);
+int		is_backwards_list(t_list *list_a);
 
 void	algos_len2(t_list *list_a, t_list *list_b);
 void	algos_len3(t_list *list_a, t_list *list_b);
