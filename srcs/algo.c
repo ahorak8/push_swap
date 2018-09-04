@@ -15,68 +15,71 @@
 void	algos_len2(t_list *list_a, t_list *list_b)
 {
 	if (list_a->head->data > list_a->head->next->data)
-	{
-		sa(list_a);
-		write(1, "sa\n", 4);
-	}
+		sa_print(list_a);
 }
 
 void	algos_len3(t_list *list_a, t_list *list_b)
 {
 	if (list_a->head->data < list_a->head->next->data)
 	{
-		rra(list_a);
-		write(1, "rra\n", 4);
+		rra_print(list_a);
 		if (is_sorted(list_a, list_b) == 0)
-		{
-			sa(list_a);
-			write(1, "sa\n", 3);
-		}
+			sa_print(list_a);	
 	}
 	else if (list_a->head->data > list_a->head->next->data)
 	{
 		if (list_a->head->data > list_a->tail->data)
 		{
-			ra(list_a);
-			write(1, "ra\n", 3);
+			ra_print(list_a);
 			if (is_sorted(list_a, list_b) == 0)
-			{
-				sa(list_a);
-				write(1, "sa\n", 3);
-			}
+				sa_print(list_a);
 		}
 		else
-		{
-				sa(list_a);
-				write(1, "sa\n", 3);
-			}
+			sa_print(list_a);
 	}
 }
 
-void	algos_len5(t_list *list_a, t_list *list_b)
+void	algos_len4(t_list *list_a, t_list *list_b)
+{
+
+}
+
+void	algos_len5(t_list *list_a, t_list *list_b) //backwards list
 {
 	if (list_a->head->data > list_a->head->next->data && \
 	list_a->head->next->data > list_a->head->next->next->data && \
 	list_a->head->next->next->data > list_a->head->next->next->next->data && \
 	list_a->tail->data < list_a->head->next->next->next->data)
 	{
-		pb(list_a, list_b);
-		write(1, "pb\n", 3);
-		pb(list_a, list_b);
-		write(1, "pb\n", 3);
-		ss(list_a, list_b);
-		write(1, "ss\n", 3);
-		rra(list_a);
-		write(1, "rra\n", 4);
-		pa(list_a, list_b);
-		write(1, "pa\n", 3);
-		pa(list_a, list_b);
-		write(1, "pa\n", 3);
-		ra(list_a);
-		write(1, "ra\n", 3);
-		ra(list_a);
-		write(1, "ra\n", 3);
+		pb_print(list_a, list_b);
+		pb_print(list_a, list_b);
+		ss_print(list_a, list_b);
+		rra_print(list_a);
+		pa_print(list_a, list_b);
+		pa_print(list_a, list_b);
+		ra_print(list_a);
+		ra_print(list_a);
 	}
 	else
-		write(1, "boop", 4);
+		write(1, "algos", 4);
+}
+
+void	algos_backwards_list(t_list *list_a, t_list *list_b)
+{
+
+}
+
+void	algos_small(t_list *list_a, t_list *list_b)
+{
+	
+}
+
+void	algos_med(t_list *list_a, t_list *list_b)
+{
+	
+}
+
+void	algos_large(t_list *list_a, t_list *list_b)
+{
+	
 }
