@@ -30,6 +30,8 @@ void	rra(t_list *list_a);
 void	rrb(t_list *list_b);
 void	rrr(t_list *list_a, t_list *list_b);
 
+void	is_backwards_list(t_list *list_a);
+
 void	algos_len2(t_list *list_a, t_list *list_b);
 void	algos_len3(t_list *list_a, t_list *list_b);
 void	algos_len4(t_list *list_a, t_list *list_b);
@@ -37,5 +39,6 @@ void	algos_len5(t_list *list_a, t_list *list_b);
 void	algos_small(t_list *list_a, t_list *list_b);
 void	algos_med(t_list *list_a, t_list *list_b);
 void	algos_large(t_list *list_a, t_list *list_b);
+void	algos_backwards(t_list *list_a, t_list *list_b);
 
 #endif
