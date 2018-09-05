@@ -23,7 +23,7 @@ void	algos_len3(t_list *list_a, t_list *list_b)
 	if (list_a->head->data < list_a->head->next->data)
 	{
 		rra_print(list_a);
-		if (is_sorted(list_a, list_b) == 0)
+		if (is_sorted_list(list_a) == 0)
 			sa_print(list_a);	
 	}
 	else if (list_a->head->data > list_a->head->next->data)
@@ -31,7 +31,7 @@ void	algos_len3(t_list *list_a, t_list *list_b)
 		if (list_a->head->data > list_a->tail->data)
 		{
 			ra_print(list_a);
-			if (is_sorted(list_a, list_b) == 0)
+			if (is_sorted_list(list_a) == 0)
 				sa_print(list_a);
 		}
 		else
