@@ -31,3 +31,19 @@ int		is_sorted(t_list *list_a, t_list *list_b)
 	else
 		return (1);
 }
+
+int		is_sorted_list(t_list *list_a)
+{
+	t_node	*node;
+
+	node = list_a->head;
+	if (list_a->head->data == list_a->tail->data)
+		return (1);
+	while (node->next != NULL)
+	{
+		if (node->data > node->next->data)
+			return (0);
+		node = node->next;
+	}
+	return (1);
+}
