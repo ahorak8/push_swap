@@ -21,7 +21,7 @@ void	pa(t_list *list_a, t_list *list_b)
 	}
 }
 
-void	pb(t_list *list_b, t_list *list_a)
+void	pb(t_list *list_a, t_list *list_b)
 {
 	if (!(list_a == NULL || list_a->head == NULL))
 	{
