@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-void	algos_len2(t_list *list_a, t_list *list_b)
+void	algos_len2(t_list *list_a)
 {
 	if (list_a->head->data > list_a->head->next->data)
 		sa_print(list_a);
@@ -49,6 +49,10 @@ void	algos_len4(t_list *list_a, t_list *list_b)
 		sa_print(list_a);
 	}
 	else
-		write(1, "no\n", 3);
-		// algos_small(len, list_a, list_b);
+	{
+		algos_smallest_first(list_a);
+		pb_print(list_a, list_b);
+		algos_len3(list_a, list_b);
+		pa_print(list_a, list_b);
+	}
 }

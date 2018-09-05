@@ -12,6 +12,35 @@
 
 #include "../includes/push_swap.h"
 
+void	algos_smallest_first(t_list *list_a)
+{
+	t_node *node;
+	int		smallest;
+
+	smallest = list_a->head->data;
+	node = list_a->head;
+	while (node != NULL)
+	{
+		if (node->data < smallest)
+			smallest = node->data;
+		node = node->next;
+	}
+	while (list_a->head->data != smallest)
+	{
+		if (list_a->head->data != smallest && list_a->tail->data == smallest)
+			rra_print(list_a);
+		else if (list_a->head->data != smallest && list_a->head->next->data == smallest)
+			sa_print(list_a);
+		else if (list_a->head->data != smallest && list_a->tail->prev->data == smallest)
+		{
+			rra_print(list_a);
+			rra_print(list_a);
+		}
+		else
+			ra_print(list_a);
+	}
+}
+
 void	algos_small(int len, t_list *list_a, t_list *list_b)
 {
 	t_node	*max;
