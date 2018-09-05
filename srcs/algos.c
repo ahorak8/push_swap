@@ -14,7 +14,7 @@
 
 void	algos_smallest_first(t_list *list_a)
 {
-	t_node *node;
+	t_node 	*node;
 	int		smallest;
 
 	smallest = list_a->head->data;
@@ -41,35 +41,65 @@ void	algos_smallest_first(t_list *list_a)
 	}
 }
 
+int		half(int len)
+{
+	int	half;
+
+	if (len % 2 == 0)
+		half = len / 2;
+	else
+	{
+		len = len - 1;
+		half = len / 2;
+	}
+	return (half);
+}
+
 void	algos_small(int len, t_list *list_a, t_list *list_b)
 {
-	t_node	*max;
+	int		len2; 
+	int		half;
 
-	max = list_a->head;
-	while (max->next != NULL)
-	{
-		if (max->data < max->next->data)
-			max = max->next;
-	}
+	len2 = 0;
 	while (len > 3)
 	{
-		if (list_a->head->data < list_a->head->next->data)
-			pb_print(list_a, list_b);
-		else
-		{	
-			if (list_b->head->data < list_b->head->next->data)
-				ss_print(list_a, list_b);
-			else
-				sa_print(list_a);
-		}
+		algos_smallest_first(list_a);
+		pb_print(list_a, list_b);
 		len--;
+		len2++;
 	}
 	algos_len3(list_a, list_b);
+	while (len2 != 0)
+	{
+		pa_print(list_a, list_b);
+		len2--;
+	}
 }
 
 void	algos_med(int len, t_list *list_a, t_list *list_b)
 {
-	
+	// t_node	*max;
+
+	// max = list_a->head;
+	// while (max->next != NULL)
+	// {
+	// 	if (max->data < max->next->data)
+	// 		max = max->next;
+	// }
+	// while (len > 3)
+	// {
+	// 	if (list_a->head->data < list_a->head->next->data)
+	// 		pb_print(list_a, list_b);
+	// 	else
+	// 	{	
+	// 		if (list_b->head->data < list_b->head->next->data)
+	// 			ss_print(list_a, list_b);
+	// 		else
+	// 			sa_print(list_a);
+	// 	}
+	// 	len--;
+	// }
+	// algos_len3(list_a, list_b);
 }
 
 void	algos_large(int len, t_list *list_a, t_list *list_b)
