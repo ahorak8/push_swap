@@ -19,7 +19,8 @@ SRCS_1 = srcs/checker.c srcs/push.c srcs/swap.c srcs/rotate.c \
 		srcs/reverse_rotate.c srcs/is_sorted.c srcs/receive_instructions.c 
 
 SRCS_2 = srcs/push_swap.c srcs/push.c srcs/swap.c srcs/rotate.c \
-		srcs/reverse_rotate.c srcs/is_sorted.c srcs/algo.c 
+		srcs/reverse_rotate.c srcs/is_sorted.c srcs/algos.c srcs/algos_len.c \
+		srcs/algos_backwards.c srcs/print_op.c 
 
 OBJ_1 = $(SRCS_1:.c=.o)
 OBJ_2 = $(SRCS_2:.c=.o)
