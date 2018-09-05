@@ -17,17 +17,17 @@ void	select_algos(int len, t_list *list_a, t_list *list_b)
 	len = len - 1;
 	if (len == 2)
 		algos_len2(list_a, list_b);
-	if (len == 3)
+	else if (len == 3)
 		algos_len3(list_a, list_b);
-	if (len == 4)
+	else if (len == 4)
 		algos_len4(list_a, list_b);
-	if (is_backwards_list(list_a) == 1)
+	else if (is_backwards_list(list_a) == 1)
 		algos_backwards(len, list_a, list_b);
-	if (len > 4 && len <= 10)
+	else if (len > 4 && len <= 10)
 		algos_small(len, list_a, list_b);
-	if (len > 10 && len <= 100)
+	else if (len > 10 && len <= 100)
 		algos_med(len, list_a, list_b);
-	if (len > 100)
+	else if (len > 100)
 		algos_large(len, list_a, list_b);
 }
 
@@ -38,7 +38,6 @@ int		main(int argc, char **argv)
 
 	if (argc > 1)
 	{
-		error_check(argc, argv);
 		list_a = ft_list_new();
 		list_b = ft_list_new();
 		argv++;

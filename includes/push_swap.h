@@ -17,6 +17,7 @@
 int		is_sorted(t_list *list_a, t_list *list_b);
 void	receive_instructions(t_list *list_a, t_list *list_b);
 void	error(void);
+void	error_check(int argc, char **argv);
 
 void	pa(t_list *list_a, t_list *list_b);
 void	pb(t_list *list_b, t_list *list_a);
@@ -29,6 +30,18 @@ void	ss(t_list *list_a, t_list *list_b);
 void	rra(t_list *list_a);
 void	rrb(t_list *list_b);
 void	rrr(t_list *list_a, t_list *list_b);
+
+void	pa_print(t_list *list_a, t_list *list_b);
+void	pb_print(t_list *list_b, t_list *list_a);
+void	ra_print(t_list *list_a);
+void	rb_print(t_list *list_b);
+void	rr_print(t_list *list_a, t_list *list_b);
+void	sa_print(t_list *list_a);
+void	sb_print(t_list *list_b);
+void	ss_print(t_list *list_a, t_list *list_b);
+void	rra_print(t_list *list_a);
+void	rrb_print(t_list *list_b);
+void	rrr_print(t_list *list_a, t_list *list_b);
 
 int		is_backwards_list(t_list *list_a);
 

@@ -49,5 +49,6 @@ void	algos_len4(t_list *list_a, t_list *list_b)
 		sa_print(list_a);
 	}
 	else
-		algos_small(list_a, list_b);
+		write(1, "no\n", 3);
+		// algos_small(len, list_a, list_b);
 }

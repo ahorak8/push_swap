@@ -17,7 +17,7 @@ void	check_instructions(char *str, t_list *list_a, t_list *list_b)
 	if (ft_strcmp(str, "pa") == 0)
 		pa(list_a, list_b);
 	else if (ft_strcmp(str, "pb") == 0)
-		pb(list_b, list_a);
+		pb(list_a, list_b);
 	else if (ft_strcmp(str, "sa") == 0)
 		sa(list_a);
 	else if (ft_strcmp(str, "sb") == 0)
