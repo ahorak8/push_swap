@@ -49,29 +49,29 @@ int		find_smallest_pos(t_list *list)
 	return (smallest_pos);
 }
 
-int		move_to_top(int smallest, int len, int smallest_pos, t_list *list_a)
+int		move_to_top(int smallest, int len, int smallest_pos, t_list *list)
 {
 	int		half;
 
 	half = half_length(len);
-	if (list_a->head->data != smallest && \
-	list_a->tail->data == smallest)
-		rra_print(list_a);
-	else if (list_a->head->data != smallest && \
-	list_a->head->next->data == smallest)
-		sa_print(list_a);
-	else if (list_a->head->data != smallest && \
-	list_a->tail->prev->data == smallest)
+	if (list->head->data != smallest && \
+	list->tail->data == smallest)
+		rra_print(list);
+	else if (list->head->data != smallest && \
+	list->head->next->data == smallest)
+		sa_print(list);
+	else if (list->head->data != smallest && \
+	list->tail->prev->data == smallest)
 	{
-		rra_print(list_a);
-		rra_print(list_a);
+		rra_print(list);
+		rra_print(list);
 	}
 	else
 	{
 		if (smallest_pos > half)
-			rra_print(list_a);
+			rra_print(list);
 		else if (smallest_pos <= half)
-			ra_print(list_a);
+			ra_print(list);
 	}
 }
 

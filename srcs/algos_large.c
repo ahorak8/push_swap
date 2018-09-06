@@ -47,7 +47,7 @@ void	algos_smallest_first_fifth(int len, t_list *list_a, t_list *list_b)
 	smallest_pos = find_smallest_pos(list_a);
 	val_limit = list_a->head->data;
 	val_limit = find_val_limit(len, smallest, val_limit, list_a);
-	while (list_a->head->data != val_limit)
+	while (smallest <= val_limit)
 	{
 		move_to_top(smallest, len, smallest_pos, list_a);
 		pb_print(list_a, list_b);
