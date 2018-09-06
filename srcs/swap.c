@@ -23,7 +23,6 @@ void	swap(t_list *list)
 	node->prev = list->head;
 	node->next = list->head->next;
 	list->head->next = node;
-
 	current = list->head;
 	while (current->next != NULL)
 	{

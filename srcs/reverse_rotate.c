@@ -38,7 +38,7 @@ void	rrr(t_list *list_a, t_list *list_b)
 		ft_list_del(list_a, list_a->tail);
 	}
 	if (list_b != NULL && list_b->head != NULL && list_b->head->next != NULL)
-	{	
+	{
 		ft_list_prepend(list_b, list_b->tail->data);
 		ft_list_del(list_b, list_b->tail);
 	}
