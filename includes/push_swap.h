@@ -19,12 +19,15 @@ int		is_sorted_list(t_list *list);
 
 int		find_smallest(t_list *list);
 int		find_smallest_pos(t_list *list);
+int		find_biggest(t_list *list);
+int		find_biggest_pos(t_list *list);
 int		half_length(int len);
 int		fifth_length(int len);
 int		move_to_top(int smallest, int len, int smallest_pos, t_list *list);
 
 int		is_backwards_list(t_list *list_a);
 
+void	algos_biggest_first(int len, t_list *list);
 void	algos_smallest_first(int len, t_list *list);
 void	algos_smallest_first_fifth(int len, t_list *list_a, t_list *list_b);
 void	algos_backwards(int len, t_list *list_a, t_list *list_b);
