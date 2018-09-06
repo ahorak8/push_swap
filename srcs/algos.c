@@ -121,5 +121,27 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 
 void	algos_large(int len, t_list *list_a, t_list *list_b)
 {
-	
+	int len2;
+
+	len2 = 0;
+	while (len > 3)
+	{
+		if (list_a->head->data < list_a->head->next->data)
+			pb_print(list_a, list_b);
+		else
+		{	
+			algos_smallest_first(len, list_a);
+			pb_print(list_a, list_b);
+			if (list_a->head->data > list_a->head->next->data)
+				sa_print(list_a);
+		}
+		len--;
+		len2++;
+	}
+	algos_len3(list_a, list_b);
+	while (len2 != 0)
+	{
+		pa_print(list_a, list_b);
+		len2--;
+	}
 }
