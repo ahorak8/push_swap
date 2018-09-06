@@ -98,12 +98,8 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 		{	
 			algos_smallest_first(len, list_a);
 			pb_print(list_a, list_b);
-			if (list_a->head->data < list_a->head->next->data && list_b->head->data < list_b->head->next->data)
-				ss_print(list_a, list_b);
-			else if (list_a->head->data < list_a->head->next->data)
+			if (list_a->head->data > list_a->head->next->data)
 				sa_print(list_a);
-			else if (list_b->head->data < list_b->head->next->data)
-				sb_print(list_a);
 		}
 		len--;
 		len2++;
@@ -115,6 +111,7 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 		len2--;
 	}
 }
+			
 	// max = list_a->head;
 	// while (max->next != NULL)
 	// {
