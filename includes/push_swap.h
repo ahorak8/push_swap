@@ -15,13 +15,19 @@
 # include "../libft/includes/libft.h"
 
 int		is_sorted(t_list *list_a, t_list *list_b);
-int		is_sorted_list(t_list *list_a);
+int		is_sorted_list(t_list *list);
 
 int		find_smallest(t_list *list);
 int		find_smallest_pos(t_list *list);
 int		half_length(int len);
 int		fifth_length(int len);
-int		move_to_top(int smallest, int len, int smallest_pos, t_list *list_a);
+int		move_to_top(int smallest, int len, int smallest_pos, t_list *list);
+
+int		is_backwards_list(t_list *list_a);
+
+void	algos_smallest_first(int len, t_list *list);
+void	algos_smallest_first_fifth(int len, t_list *list_a, t_list *list_b);
+void	algos_backwards(int len, t_list *list_a, t_list *list_b);
 
 void	receive_instructions(t_list *list_a, t_list *list_b);
 void	error(void);
@@ -40,7 +46,7 @@ void	rrb(t_list *list_b);
 void	rrr(t_list *list_a, t_list *list_b);
 
 void	pa_print(t_list *list_a, t_list *list_b);
-void	pb_print(t_list *list_b, t_list *list_a);
+void	pb_print(t_list *list_a, t_list *list_b);
 void	ra_print(t_list *list_a);
 void	rb_print(t_list *list_b);
 void	rr_print(t_list *list_a, t_list *list_b);
@@ -51,16 +57,10 @@ void	rra_print(t_list *list_a);
 void	rrb_print(t_list *list_b);
 void	rrr_print(t_list *list_a, t_list *list_b);
 
-int		is_backwards_list(t_list *list_a);
-
 void	algos_len2(t_list *list_a);
 void	algos_len3(t_list *list_a, t_list *list_b);
 void	algos_len4(int len, t_list *list_a, t_list *list_b);
 void	algos_len5(int len, t_list *list_a, t_list *list_b);
-
-void	algos_smallest_first(int len, t_list *list_a);
-void	algos_smallest_first_fifth(int len, t_list *list_a);
-void	algos_backwards(int len, t_list *list_a, t_list *list_b);
 
 void	algos_small(int len, t_list *list_a, t_list *list_b);
 void	algos_med(int len, t_list *list_a, t_list *list_b);
