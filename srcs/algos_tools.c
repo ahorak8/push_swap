@@ -83,10 +83,10 @@ int		find_biggest_pos(t_list *list)
 		}
 		node = node->next;
 	}
-	return (biggest);
+	return (biggest_pos);
 }
 
-int		move_to_top(int smallest, int len, int position, t_list *list)
+void	move_to_top(int smallest, int len, int position, t_list *list)
 {
 	int		half;
 

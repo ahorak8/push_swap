@@ -35,6 +35,7 @@ int		find_val_limit(int len, int smallest, int val_limit, t_list *list)
 		val_limit = nextsmall_fresh;
 		count++;
 	}
+	return (val_limit);
 }
 
 void	algos_smallest_first_fifth(int len, t_list *list_a, t_list *list_b)

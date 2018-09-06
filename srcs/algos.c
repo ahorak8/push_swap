@@ -93,22 +93,34 @@ void	algos_large(int len, t_list *list_a, t_list *list_b)
 {
 	int 	count;
 	int		returned;
+	int		len2;
 
-	count = 1;
+	count = 5;
 	returned = 0;
-	while (count != 5)
+	len2 = 0;
+	while (count != 1)
 	{
 		algos_smallest_first_fifth(len, list_a, list_b);
-		count++;
+		count--;
 		while (list_b->head != NULL)
 		{
-			algos_smallest_first(len, list_b);
+			algos_biggest_first(len, list_b);
 			pa_print(list_a, list_b);
 			returned++;
 		}
-		while (returned > 0)
+		while (returned >= 0)
 		{
 			pb_print(list_a, list_b);
+			returned--;
 		}
 	}
+	// while (len > 3)
+	// {
+	// 	algos_smallest_first(len, list_a);
+	// 	pb_print(list_a, list_b);
+	// 	len--;
+	// }
+	// algos_len3(list_a, list_b);
+	while (list_b->head != NULL)
+		pa_print(list_a, list_b);
 }
