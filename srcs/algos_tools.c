@@ -65,7 +65,7 @@ int		find_biggest(t_list *list)
 	return (biggest);
 }
 
-int		find_biggest(t_list *list)
+int		find_biggest_pos(t_list *list)
 {
 	t_node	*node;
 	int		biggest;
