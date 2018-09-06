@@ -17,6 +17,12 @@
 int		is_sorted(t_list *list_a, t_list *list_b);
 int		is_sorted_list(t_list *list_a);
 
+int		find_smallest(t_list *list);
+int		find_smallest_pos(t_list *list);
+int		half_length(int len);
+int		fifth_length(int len);
+int		move_to_top(int smallest, int len, int smallest_pos, t_list *list_a);
+
 void	receive_instructions(t_list *list_a, t_list *list_b);
 void	error(void);
 void	error_check(int argc, char **argv);
