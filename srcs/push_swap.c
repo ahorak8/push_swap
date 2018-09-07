@@ -37,9 +37,13 @@ int		main(int argc, char **argv)
 {
 	t_list	*list_a;
 	t_list	*list_b;
+	t_list	*args;
 
 	if (argc > 1)
 	{
+		args = get_args(argc, argv);
+		error_check(argc, argv);
+
 		list_a = ft_list_new();
 		list_b = ft_list_new();
 		argv++;

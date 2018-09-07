@@ -34,6 +34,8 @@ void	algos_smallest_first(int len, t_list *list);
 void	algos_smallest_first_fifth(int len, t_list *list_a, t_list *list_b);
 void	algos_backwards(int len, t_list *list_a, t_list *list_b);
 
+t_list	*get_args(int len, char **argv);
+
 void	receive_instructions(t_list *list_a, t_list *list_b);
 void	error(void);
 void	error_check(int argc, char **argv);
