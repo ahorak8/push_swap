@@ -16,7 +16,10 @@ int		is_sorted(t_list *list_a, t_list *list_b)
 {
 	t_node	*node;
 
-	node = list_a->head;
+	if (list_a->head != NULL)
+		node = list_a->head;
+	else
+		return (0);
 	if (list_a->head->data == list_a->tail->data)
 		if (list_b->head == NULL)
 			return (1);

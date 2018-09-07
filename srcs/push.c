@@ -14,7 +14,7 @@
 
 void	pa(t_list *list_a, t_list *list_b)
 {
-	if (!(list_b == NULL || list_b->head == NULL))
+	if (list_b != NULL && list_b->head != NULL)
 	{
 		ft_list_prepend(list_a, list_b->head->data);
 		ft_list_del(list_b, list_b->head);
@@ -23,7 +23,7 @@ void	pa(t_list *list_a, t_list *list_b)
 
 void	pb(t_list *list_a, t_list *list_b)
 {
-	if (!(list_a == NULL || list_a->head == NULL))
+	if (list_a != NULL && list_a->head != NULL)
 	{
 		ft_list_prepend(list_b, list_a->head->data);
 		ft_list_del(list_a, list_a->head);
