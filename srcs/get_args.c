@@ -21,7 +21,7 @@ t_list		*get_args(int len, char **argv)
 	int		j;
 
 	i = 0;
-	ret = ft_lst_new();
+	ret = ft_list_new();
 	while (++i < len)
 	{
 		j = -1;
@@ -29,10 +29,10 @@ t_list		*get_args(int len, char **argv)
 		while (split[++j] != NULL)
 		{
 			printf("Split [%d]%s \n", j, split[j]);
-			ret = ft_lst_append(ret, ft_atoi(split[j]));
+			ret = ft_list_append(ret, ft_atoi(split[j]));
 		}
 		ft_strdel(split);
 	}
-	lst_print(ret);
+	list_print(ret);
 	return (ret);
 }
