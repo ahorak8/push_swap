@@ -33,7 +33,8 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
 	ft_list_push_back.c ft_list_push_front.c ft_list_push_params.c \
 	ft_list_remove_if.c ft_list_reverse_fun.c ft_list_reverse.c \
 	ft_list_size.c ft_list_sort.c ft_create_elem.c ft_countwords.c \
-	ft_list_new.c ft_list_append.c ft_list_prepend.c ft_list_del.c ft_atol.c
+	ft_list_new.c ft_list_append.c ft_list_prepend.c ft_list_del.c ft_atol.c \
+	ft_amount_of_words.c 
 
 all		: $(NAME)
 
