@@ -18,7 +18,7 @@ void	algos_len2(t_list *list_a)
 		sa_print(list_a);
 }
 
-void	algos_len3(t_list *list_a, t_list *list_b)
+void	algos_len3(t_list *list_a)
 {
 	if (list_a->head->data < list_a->head->next->data)
 	{
@@ -52,7 +52,7 @@ void	algos_len4(int len, t_list *list_a, t_list *list_b)
 	{
 		algos_smallest_first(len, list_a);
 		pb_print(list_a, list_b);
-		algos_len3(list_a, list_b);
+		algos_len3(list_a);
 		pa_print(list_a, list_b);
 	}
 }

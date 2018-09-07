@@ -15,7 +15,6 @@
 t_list		*get_args(int len, char **argv)
 {
 	t_list	*ret;
-	t_list	*temp;
 	char	**split;
 	int		i;
 	int		j;

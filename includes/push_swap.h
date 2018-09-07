@@ -67,12 +67,12 @@ void	list_print(t_list *list);
 void	print_stacks(t_list *list_a, t_list *list_b);
 
 void	algos_len2(t_list *list_a);
-void	algos_len3(t_list *list_a, t_list *list_b);
+void	algos_len3(t_list *list_a);
 void	algos_len4(int len, t_list *list_a, t_list *list_b);
 void	algos_len5(int len, t_list *list_a, t_list *list_b);
 
 void	algos_small(int len, t_list *list_a, t_list *list_b);
 void	algos_med(int len, t_list *list_a, t_list *list_b);
-void	algos_large(int len, t_list *list_a, t_list *list_b);
+// void	algos_large(int len, t_list *list_a, t_list *list_b);
 
 #endif

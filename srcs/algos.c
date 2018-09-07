@@ -34,7 +34,7 @@ void	algos_small(int len, t_list *list_a, t_list *list_b)
 		len--;
 		len2++;
 	}
-	algos_len3(list_a, list_b);
+	algos_len3(list_a);
 	while (len2 != 0)
 	{
 		pa_print(list_a, list_b);
@@ -56,7 +56,7 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 		len--;
 		len2++;
 	}
-	algos_len3(list_a, list_b);
+	algos_len3(list_a);
 	while (len2 != 0)
 	{
 		pa_print(list_a, list_b);
@@ -64,8 +64,8 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 	}
 }
 
-void	algos_large(int len, t_list *list_a, t_list *list_b)
-{}
+// void	algos_large(int len, t_list *list_a, t_list *list_b)
+// {
 // 	int 	count;
 // 	int		returned;
 	
