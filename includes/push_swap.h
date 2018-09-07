@@ -61,6 +61,8 @@ void	ss_print(t_list *list_a, t_list *list_b);
 void	rra_print(t_list *list_a);
 void	rrb_print(t_list *list_b);
 void	rrr_print(t_list *list_a, t_list *list_b);
+void	list_print(t_list *list);
+void	print_stacks(t_list *list_a, t_list *list_b);
 
 void	algos_len2(t_list *list_a);
 void	algos_len3(t_list *list_a, t_list *list_b);
