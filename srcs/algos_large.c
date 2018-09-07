@@ -12,29 +12,32 @@
 
 #include "../includes/push_swap.h"
 
-int		find_val_limit(int len, int smallest, int val_limit, t_list *list)
+int		find_val_limit(int len, int smallest, t_list *list)
 {
-	int		nextsmall_fresh;
-	t_node	*node;
-	int		count;
 	int		fifth;
+	int 	val_limit;
+	t_node	*node;
+	int		current_smallest;
+	int		count;
 
 	fifth = fifth_length(len);
-	count = 1;
 	node = list->head;
+	count = 0;
 	while (count <= fifth)
 	{
-		nextsmall_fresh = list->head->data;
+		current_smallest = list->head->data; 
 		while (node != NULL)
 		{
-			if (node->data < nextsmall_fresh && node->data > val_limit \
-			&& node->data != smallest)
-				nextsmall_fresh = node->data;
+			if (node->data < current_smallest && node->data > smallest)
+			{
+				current_smallest = node->data;
+			}
 			node = node->next;
 		}
-		val_limit = nextsmall_fresh;
+		smallest = current_smallest;
 		count++;
 	}
+	val_limit = smallest;
 	return (val_limit);
 }
 
@@ -43,16 +46,33 @@ void	algos_smallest_first_fifth(int len, t_list *list_a, t_list *list_b)
 	int		smallest;
 	int		val_limit;
 	int		smallest_pos;
+	int		count;
 
+	count = 0;
 	smallest = find_smallest(list_a);
 	smallest_pos = find_smallest_pos(list_a);
 	val_limit = list_a->head->data;
-	val_limit = find_val_limit(len, smallest, val_limit, list_a);
+	val_limit = find_val_limit(len, smallest, list_a);
 	while (smallest <= val_limit)
 	{
 		move_to_top(smallest, len, smallest_pos, list_a);
 		pb_print(list_a, list_b);
 		smallest = find_smallest(list_a);
 		smallest_pos = find_smallest_pos(list_a);
+		count++;
 	}
+}
+
+void	algos_biggest_first(int len, t_list *list)
+{
+	t_node	*node;
+	int		biggest;
+	int		biggest_pos;
+
+	len = fifth_length(len);
+	node = list->head;
+	biggest = find_biggest(list);
+	biggest_pos = find_biggest_pos(list);
+	// while (list->head->data != biggest)
+	move_to_top(biggest, len, biggest_pos, list);
 }

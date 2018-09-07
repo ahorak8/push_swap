@@ -35,16 +35,12 @@ int		find_smallest_pos(t_list *list)
 	int		smallest_pos;
 
 	node = list->head;
-	smallest = list->head->data;
-	smallest_pos = 1;
-	while (node != NULL)
+	smallest = find_smallest(list);
+	smallest_pos = 0;
+	while (node->data != smallest)
 	{
-		if (node->data < smallest)
-		{
-			smallest = node->data;
-			smallest_pos++;
-		}
 		node = node->next;
+		smallest_pos++;
 	}
 	return (smallest_pos);
 }
@@ -72,42 +68,38 @@ int		find_biggest_pos(t_list *list)
 	int		biggest_pos;
 
 	node = list->head;
-	biggest = list->head->data;
-	biggest_pos = 1;
-	while (node != NULL)
+	biggest = find_biggest(list);
+	biggest_pos = 0;
+	while (node->data != biggest)
 	{
-		if (node->data > biggest)
-		{
-			biggest = node->data;
-			biggest_pos++;
-		}
 		node = node->next;
+		biggest_pos++;
 	}
 	return (biggest_pos);
 }
 
-void	move_to_top(int smallest, int len, int position, t_list *list)
+void	move_to_top(int size, int len, int position, t_list *list)
 {
 	int		half;
 
 	half = half_length(len);
-	if (list->head->data != smallest && \
-	list->tail->data == smallest)
-		rra_print(list);
-	else if (list->head->data != smallest && \
-	list->head->next->data == smallest)
-		sa_print(list);
-	else if (list->head->data != smallest && \
-	list->tail->prev->data == smallest)
+	while (list->head->data != size)
 	{
-		rra_print(list);
-		rra_print(list);
-	}
-	else
-	{
-		if (position > half)
+		if (list->head->data != size && list->tail->data == size)
 			rra_print(list);
-		else if (position <= half)
-			ra_print(list);
+		else if (list->head->data != size && list->head->next->data == size)
+			sa_print(list);
+		else if (list->head->data != size && list->tail->prev->data == size)
+		{
+			rra_print(list);
+			rra_print(list);
+		}
+		else
+		{
+			if (position > half)
+				rra_print(list);
+			else if (position <= half)
+				ra_print(list);
+		}
 	}
 }

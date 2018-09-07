@@ -25,7 +25,7 @@ int		half_length(int len);
 int		fifth_length(int len);
 int		is_backwards_list(t_list *list_a);
 
-void	move_to_top(int smallest, int len, int smallest_pos, t_list *list);
+void	move_to_top(int size, int len, int smallest_pos, t_list *list);
 void	algos_biggest_first(int len, t_list *list);
 void	algos_smallest_first(int len, t_list *list);
 void	algos_smallest_first_fifth(int len, t_list *list_a, t_list *list_b);

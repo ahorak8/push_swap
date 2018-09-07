@@ -14,32 +14,15 @@
 
 void	algos_smallest_first(int len, t_list *list)
 {
-	t_node	*node;
+	// t_node	*node;
 	int		smallest;
 	int		smallest_pos;
 
-	node = list->head;
+	// node = list->head;
 	smallest = find_smallest(list);
 	smallest_pos = find_smallest_pos(list);
-	while (list->head->data != smallest)
-	{
-		move_to_top(smallest, len, smallest_pos, list);
-	}
-}
-
-void	algos_biggest_first(int len, t_list *list)
-{
-	t_node	*node;
-	int		biggest;
-	int		biggest_pos;
-
-	node = list->head;
-	biggest = find_biggest(list);
-	biggest_pos = find_biggest_pos(list);
-	while (list->head->data != biggest)
-	{
-		move_to_top(biggest, len, biggest_pos, list);
-	}
+	// while (list->head->data != smallest)
+	move_to_top(smallest, len, smallest_pos, list);
 }
 
 void	algos_small(int len, t_list *list_a, t_list *list_b)
@@ -69,14 +52,14 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 	len2 = 0;
 	while (len > 3)
 	{
-		if (list_a->head->data < list_a->head->next->data)
-			pb_print(list_a, list_b);
-		else
+		// if (list_a->head->data < list_a->head->next->data)
+		// 	pb_print(list_a, list_b);
+		// else
 		{
 			algos_smallest_first(len, list_a);
 			pb_print(list_a, list_b);
-			if (list_a->head->data > list_a->head->next->data)
-				sa_print(list_a);
+			// if (list_a->head->data > list_a->head->next->data)
+			// 	sa_print(list_a);
 		}
 		len--;
 		len2++;
@@ -89,38 +72,40 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 	}
 }
 
-void	algos_large(int len, t_list *list_a, t_list *list_b)
-{
-	int 	count;
-	int		returned;
-	int		len2;
-
-	count = 5;
-	returned = 0;
-	len2 = 0;
-	while (count != 1)
-	{
-		algos_smallest_first_fifth(len, list_a, list_b);
-		count--;
-		while (list_b->head != NULL)
-		{
-			algos_biggest_first(len, list_b);
-			pa_print(list_a, list_b);
-			returned++;
-		}
-		while (returned >= 0)
-		{
-			pb_print(list_a, list_b);
-			returned--;
-		}
-	}
-	// while (len > 3)
-	// {
-	// 	algos_smallest_first(len, list_a);
-	// 	pb_print(list_a, list_b);
-	// 	len--;
-	// }
-	// algos_len3(list_a, list_b);
-	while (list_b->head != NULL)
-		pa_print(list_a, list_b);
-}
+// void	algos_large(int len, t_list *list_a, t_list *list_b)
+// {
+// 	int 	count;
+// 	int		returned;
+	
+// 	count = 5;
+// 	returned = 0;
+// 	while (count >= 1)
+// 	{
+// 		algos_smallest_first_fifth(len, list_a, list_b);
+// 		count--;
+// 		// malloc error in here:
+// 		// while (list_b->head != NULL)
+// 		// {
+// 		// 	algos_biggest_first(len, list_b);
+// 		// 	pa_print(list_a, list_b);
+// 		// 	returned++;
+// 		// }
+// 		while (returned > 0)
+// 		{
+// 			pb_print(list_a, list_b);
+// 			returned--;
+// 		}
+// 	}
+// 	while (len > 3)
+// 	{
+// 		algos_smallest_first(len, list_a);
+// 		if (list_a->head != NULL)
+// 		{	
+// 			// pb_print(list_a, list_b);
+// 			len--;
+// 		}
+// 	}
+// 	algos_len3(list_a, list_b);
+// 	while (list_b->head != NULL)
+// 		pa_print(list_a, list_b);
+// }
