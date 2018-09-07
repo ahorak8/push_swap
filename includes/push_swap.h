@@ -21,8 +21,11 @@ int		find_smallest(t_list *list);
 int		find_smallest_pos(t_list *list);
 int		find_biggest(t_list *list);
 int		find_biggest_pos(t_list *list);
+
+int		find_list_length(t_list *list);
 int		half_length(int len);
 int		fifth_length(int len);
+
 int		is_backwards_list(t_list *list_a);
 
 void	move_to_top(int size, int len, int smallest_pos, t_list *list);

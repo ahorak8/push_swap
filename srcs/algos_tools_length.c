@@ -40,3 +40,18 @@ int		fifth_length(int len)
 	}
 	return (fifth);
 }
+
+int		find_list_length(t_list *list)
+{
+	t_node	*node;
+	int		list_len;
+
+	node = list->head;
+	list_len = 0;
+	while (node != NULL)
+	{
+		list_len++;
+		node = node->next;
+	}
+	return (list_len);
+}
