@@ -87,7 +87,8 @@ void	move_to_top(int size, int len, int position, t_list *list)
 	{
 		if (list->head->data != size && list->tail->data == size)
 			rra_print(list);
-		else if (list->head->data != size && list->head->next->data == size)
+		else if (list->head->data != size && list->head->next->data == size \
+		&& list->head->next->next->data > list->head->data)
 			sa_print(list);
 		else if (list->head->data != size && list->tail->prev->data == size)
 		{
