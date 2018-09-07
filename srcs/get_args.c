@@ -14,24 +14,39 @@
 
 t_list		*get_args(int len, char **argv)
 {
-	t_list	*ret;
+	t_list	*list;
 	char	**split;
 	int		i;
 	int		j;
 
 	i = 0;
-	ret = ft_list_new();
-	while (++i < len)
+	list = NULL; //ft_list_new();
+	while (argv[i])
 	{
-		j = -1;
 		split = ft_strsplit(argv[i], ' ');
-		while (split[++j] != NULL)
+		j = 0;
+		while (argv[j])
 		{
-			printf("Split [%d]%s \n", j, split[j]);
-			ret = ft_list_append(ret, ft_atoi(split[j]));
+			if (error_check(argv[j]) == 1)
+				list = ft_list_append(list, ft_atol(split[j]));
+			else 
+				error();
+			j++;
 		}
+		i++;
 		ft_strdel(split);
 	}
-	list_print(ret);
-	return (ret);
+	// while (++i < len)
+	// {
+	// 	j = -1;
+	// 	split = ft_strsplit(argv[i], ' ');
+	// 	while (split[++j] != NULL)
+	// 	{
+	// 		printf("Split [%d]%s \n", j, split[j]);
+	// 		list = ft_list_append(list, ft_atoi(split[j]));
+	// 	}
+	// 	ft_strdel(split);
+	// }
+	// list_print(list);
+	return (list);
 }

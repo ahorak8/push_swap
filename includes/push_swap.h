@@ -38,7 +38,7 @@ t_list	*get_args(int len, char **argv);
 
 void	receive_instructions(t_list *list_a, t_list *list_b);
 void	error(void);
-void	error_check(int argc, char **argv);
+int		error_check(char **argv);
 
 void	pa(t_list *list_a, t_list *list_b);
 void	pb(t_list *list_b, t_list *list_a);

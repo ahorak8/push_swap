@@ -29,7 +29,7 @@ int		is_not_digit(char *str)
 	return (0);
 }
 
-int		is_duplicates(int ac, char **av)
+int		is_duplicates(int ac, char **av) //array of argv
 {
 	int i;
 	int j;
@@ -57,17 +57,16 @@ void	error(void)
 	exit(1);
 }
 
-void	error_check(int argc, char **argv)
+int		error_check(char **argv)
 {
-	if ((is_duplicates(argc, argv)) == 1)
-		error();
-	argv++;
+	// if ((is_duplicates(argc, argv)) == 1)
+	// 	error();
 	while (*argv)
 	{
 		if (ft_atol(*argv) > 2147483647 || ft_atol(*argv) < -2147483647)
-			error();
+			return (0);
 		if ((is_not_digit(*argv)) == 1)
-			error();
+			return(0);
 		argv++;
 	}
 }

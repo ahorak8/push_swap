@@ -20,7 +20,7 @@ void	select_algos(t_list *list_a, t_list *list_b)
 	if (len == 2)
 		algos_len2(list_a);
 	else if (len == 3)
-		algos_len3(list_a, list_b);
+		algos_len3(list_a);
 	else if (len == 4)
 		algos_len4(len, list_a, list_b);
 	else if (is_backwards_list(list_a) == 1)
@@ -29,8 +29,8 @@ void	select_algos(t_list *list_a, t_list *list_b)
 		algos_small(len, list_a, list_b);
 	else if (len > 10 && len <= 100)
 		algos_med(len, list_a, list_b);
-	else if (len > 100)
-		algos_large(len, list_a, list_b);
+	// else if (len > 100)
+	// 	algos_large(len, list_a, list_b);
 }
 
 int		main(int argc, char **argv)
