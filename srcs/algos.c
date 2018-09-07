@@ -14,14 +14,11 @@
 
 void	algos_smallest_first(int len, t_list *list)
 {
-	// t_node	*node;
 	int		smallest;
 	int		smallest_pos;
 
-	// node = list->head;
 	smallest = find_smallest(list);
 	smallest_pos = find_smallest_pos(list);
-	// while (list->head->data != smallest)
 	move_to_top(smallest, len, smallest_pos, list);
 }
 
@@ -50,16 +47,11 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 	int		len2;
 
 	len2 = 0;
-	while (len > 3)
+	while (len > 4)
 	{
-		// if (list_a->head->data < list_a->head->next->data)
-		// 	pb_print(list_a, list_b);
-		// else
 		{
 			algos_smallest_first(len, list_a);
 			pb_print(list_a, list_b);
-			// if (list_a->head->data > list_a->head->next->data)
-			// 	sa_print(list_a);
 		}
 		len--;
 		len2++;
@@ -72,8 +64,8 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 	}
 }
 
-// void	algos_large(int len, t_list *list_a, t_list *list_b)
-// {
+void	algos_large(int len, t_list *list_a, t_list *list_b)
+{}
 // 	int 	count;
 // 	int		returned;
 	
