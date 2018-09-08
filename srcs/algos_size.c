@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algos.c                                            :+:      :+:    :+:   */
+/*   algos_size.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,16 +11,6 @@
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-void	algos_smallest_first(int len, t_list *list)
-{
-	int		smallest;
-	int		smallest_pos;
-
-	smallest = find_smallest(list);
-	smallest_pos = find_smallest_pos(list);
-	move_to_top(smallest, len, smallest_pos, list);
-}
 
 void	algos_small(int len, t_list *list_a, t_list *list_b)
 {
