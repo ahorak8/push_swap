@@ -58,7 +58,7 @@ void	move_to_top(int size, int len, int position, t_list *list)
 				rra_print(list);
 			else if (position <= half)
 				ra_print(list);
-			len++;
+			len++; //why does this stop the segfault
 		}
 	}
 }
