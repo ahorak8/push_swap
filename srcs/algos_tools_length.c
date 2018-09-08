@@ -16,7 +16,7 @@ int		half_length(int len)
 {
 	int		half;
 
-	if (len % 2 == 0)
+	if (len % 2 == 0 && len)
 		half = len / 2;
 	else
 	{
@@ -30,7 +30,7 @@ int		fifth_length(int len)
 {
 	int		fifth;
 
-	if (len % 5 == 0)
+	if (len % 5 == 0 && len)
 		fifth = len / 5;
 	else
 	{
