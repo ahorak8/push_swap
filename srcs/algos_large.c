@@ -62,17 +62,3 @@ void	algos_smallest_first_fifth(int len, t_list *list_a, t_list *list_b)
 		count++;
 	}
 }
-
-void	algos_biggest_first(int len, t_list *list)
-{
-	t_node	*node;
-	int		biggest;
-	int		biggest_pos;
-
-	len = fifth_length(len);
-	node = list->head;
-	biggest = find_biggest(list);
-	biggest_pos = find_biggest_pos(list);
-	// while (list->head->data != biggest)
-	move_to_top(biggest, len, biggest_pos, list);
-}
