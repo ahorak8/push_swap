@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-t_list		*get_args(int len, char **argv)
+t_list		*get_args(char **argv)
 {
 	t_list	*list;
 	char	**split;
