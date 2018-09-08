@@ -77,30 +77,3 @@ int		find_biggest_pos(t_list *list)
 	}
 	return (biggest_pos);
 }
-
-void	move_to_top(int size, int len, int position, t_list *list)
-{
-	int		half;
-
-	half = half_length(len);
-	while (list->head->data != size)
-	{
-		if (list->head->data != size && list->tail->data == size)
-			rra_print(list);
-		else if (list->head->data != size && list->head->next->data == size \
-		&& list->head->next->next->data > list->head->data)
-			sa_print(list);
-		else if (list->head->data != size && list->tail->prev->data == size)
-		{
-			rra_print(list);
-			rra_print(list);
-		}
-		else
-		{
-			if (position > half)
-				rra_print(list);
-			else if (position <= half)
-				ra_print(list);
-		}
-	}
-}
