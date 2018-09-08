@@ -20,7 +20,7 @@ int		half_length(int len)
 		half = len / 2;
 	else
 	{
-		len = len - 1;
+		len = len + 1;
 		half = len / 2;
 	}
 	return (half);
@@ -34,9 +34,10 @@ int		fifth_length(int len)
 		fifth = len / 5;
 	else
 	{
-		while (len % 5 != 0)
-			len = len - 1;
-		fifth = len / 5;
+		if (len % 5 < 3)
+			fifth = len - (len % 5);
+		else if (len % 5 >= 3)
+			fifth = len + (5 - (len % 5));
 	}
 	return (fifth);
 }
