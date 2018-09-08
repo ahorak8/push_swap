@@ -37,7 +37,7 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 	int		len2;
 
 	len2 = 0;
-	while (len > 4)
+	while (len > 3)
 	{
 		{
 			algos_smallest_first(len, list_a);
@@ -47,23 +47,25 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 		len2++;
 	}
 	algos_len3(list_a);
-	while (len2 != 0)
+	while (len2 != 0 && list_b != NULL)
 	{
 		pa_print(list_a, list_b);
 		len2--;
 	}
 }
 
-// void	algos_large(int len, t_list *list_a, t_list *list_b)
-// {
-// 	int 	count;
-// 	int		returned;
+void	algos_large(int len, t_list *list_a, t_list *list_b)
+{
+	int		count;
+	int		returned;
+	int		len2;
 	
-// 	count = 5;
-// 	returned = 0;
-// 	while (count >= 1)
-// 	{
-// 		algos_smallest_first_fifth(len, list_a, list_b);
+	len2 = fifth_length(len);
+	count = 5;
+	returned = 0;
+	while (count != 1 && !is_sorted(list_a, list_b))
+	{
+		algos_smallest_first_fifth(len, list_a, list_b);
 // 		count--;
 // 		// malloc error in here:
 // 		// while (list_b->head != NULL)
@@ -88,6 +90,6 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 // 		}
 // 	}
 // 	algos_len3(list_a, list_b);
-// 	while (list_b->head != NULL)
-// 		pa_print(list_a, list_b);
-// }
+	while (list_b->head != NULL)
+		pa_print(list_a, list_b);
+}
