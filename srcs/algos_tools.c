@@ -39,7 +39,6 @@ void	move_to_top(int size, int len, int position, t_list *list)
 {
 	int		half;
 
-	half = half_length(len);
 	while (list->head->data != size)
 	{
 		if (list->head->data != size && list->tail->data == size)
@@ -54,10 +53,12 @@ void	move_to_top(int size, int len, int position, t_list *list)
 		}
 		else
 		{
+			half = half_length(len);
 			if (position > half)
 				rra_print(list);
 			else if (position <= half)
 				ra_print(list);
+			len++;
 		}
 	}
 }
