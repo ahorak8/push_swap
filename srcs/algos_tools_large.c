@@ -60,5 +60,7 @@ void	algos_smallest_first_fifth(int len, t_list *list_a, t_list *list_b)
 		smallest = find_smallest(list_a);
 		smallest_pos = find_smallest_pos(list_a);
 		count++;
+		if (count >= val_limit)
+			break ;
 	}
 }
