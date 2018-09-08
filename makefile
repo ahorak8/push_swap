@@ -15,15 +15,19 @@ NAME_2 = push_swap
 
 FLAGS = -Wall -Werror -Wextra -I includes -g
 
-SRCS_1 = srcs/checker.c srcs/push.c srcs/swap.c srcs/rotate.c \
-		srcs/reverse_rotate.c srcs/is_sorted.c srcs/receive_instructions.c \
+SRCS_1 = srcs/checker.c \
+		srcs/push.c srcs/swap.c srcs/rotate.c srcs/reverse_rotate.c \
+		srcs/is_sorted.c srcs/receive_instructions.c \
 		srcs/print_list.c srcs/get_args.c srcs/error_check.c 
 
-SRCS_2 = srcs/push_swap.c srcs/push.c srcs/swap.c srcs/rotate.c \
-		srcs/reverse_rotate.c srcs/is_sorted.c srcs/algos.c srcs/algos_len.c \
-		srcs/algos_backwards.c srcs/print_op_pushswap.c srcs/print_op_rotate.c \
-		srcs/print_op_reverserotate.c srcs/algos_tools.c srcs/algos_tools_length.c \
-		srcs/algos_large.c srcs/print_list.c srcs/get_args.c srcs/error_check.c  
+SRCS_2 = srcs/push_swap.c \
+		srcs/push.c srcs/swap.c srcs/rotate.c srcs/reverse_rotate.c \
+		srcs/print_op_reverserotate.c srcs/print_op_pushswap.c \
+		srcs/print_op_rotate.c srcs/print_list.c \
+		srcs/algos_size.c srcs/algos_len.c srcs/algos_backwards.c \
+		c srcs/algos_tools.c srcs/algos_tools_length.c \
+		srcs/algos_tools_identifier.c srcs/algos_tools_large.c \
+		srcs/error_check.c srcs/is_sorted.c srcs/get_args.c \
 
 OBJ_1 = $(SRCS_1:.c=.o)
 OBJ_2 = $(SRCS_2:.c=.o)
