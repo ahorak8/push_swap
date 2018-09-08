@@ -12,7 +12,7 @@
 
 #include "../includes/push_swap.h"
 
-void	check_instructions(char *str, t_list *list_a, t_list *list_b)
+void	check_instructions(const char *str, t_list *list_a, t_list *list_b)
 {
 	if (ft_strcmp(str, "pa") == 0)
 		pa(list_a, list_b);
