@@ -41,7 +41,7 @@ int		main(int argc, char **argv)
 
 	if (argc > 1)
 	{
-		args = get_args(argc, argv);
+		args = get_args(argv);
 		error_check(argc, argv);
 
 		list_a = ft_list_new();
