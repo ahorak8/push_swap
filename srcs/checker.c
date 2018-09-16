@@ -14,11 +14,9 @@
 
 int		main(int argc, char **argv)
 {
-	int		i;
 	t_list	*list_a;
 	t_list	*list_b;
 
-	i = 0;
 	if (argc > 1)
 	{
 		error_check(argc, argv);
@@ -27,12 +25,15 @@ int		main(int argc, char **argv)
 		list_b = ft_list_new();
 		while (*argv)
 		{
-			list_a = ft_list_append(list_a, ft_atoi(*argv));
+			list_a = ft_list_append(list_a, ft_atol(*argv));
 			argv++;
 		}
 		receive_instructions(list_a, list_b);
 		if (is_sorted(list_a, list_b))
+		{
+			free_list(list_a);
 			write(1, "OK\n", 3);
+		}
 		else
 			write(1, "KO\n", 3);
 	}
