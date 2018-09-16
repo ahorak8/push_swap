@@ -51,14 +51,18 @@ void	move_to_top(int size, int len, int position, t_list *list)
 			rra_print(list);
 			rra_print(list);
 		}
-		else
+		else 
 		{
-			half = half_length(len);
-			if (position > half)
-				rra_print(list);
-			else if (position <= half)
-				ra_print(list);
-			len++; //why does this stop the segfault
+			while (list->head->data != size)
+			{
+				len = find_list_length(list);
+				half = half_length(len);
+				if (position > half)
+					rra_print(list);
+				else if (position <= half)
+					ra_print(list);
+				len++;
+			}
 		}
 	}
 }
