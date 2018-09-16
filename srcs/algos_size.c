@@ -42,12 +42,14 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 		{
 			algos_smallest_first(len, list_a);
 			pb_print(list_a, list_b);
+			if (is_sorted_list(list_a))
+				break ;
 		}
 		len--;
 		len2++;
 	}
 	algos_len3(list_a);
-	while (len2 != 0 && list_b != NULL)
+	while (len2 != 0) //&& list_b != NULL) 
 	{
 		pa_print(list_a, list_b);
 		len2--;
