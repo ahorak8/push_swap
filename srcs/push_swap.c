@@ -29,8 +29,8 @@ void	select_algos(t_list *list_a, t_list *list_b)
 		algos_small(len, list_a, list_b);
 	else if (len > 10 && len <= 100)
 		algos_med(len, list_a, list_b);
-	// else if (len > 100)
-	// 	algos_large(len, list_a, list_b);
+	else if (len > 100)
+		algos_large(len, list_a, list_b);
 }
 
 int		main(int argc, char **argv)
@@ -41,8 +41,8 @@ int		main(int argc, char **argv)
 
 	if (argc > 1)
 	{
-		args = get_args(argv);
-		error_check(argc, argv);
+		list_a = get_args(argc, argv);
+		error_check(argc, argv, list_a);
 
 		list_a = ft_list_new();
 		list_b = ft_list_new();

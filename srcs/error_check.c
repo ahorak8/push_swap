@@ -29,24 +29,28 @@ int		is_not_digit(char *str)
 	return (0);
 }
 
-int		is_duplicates(int ac, char **av) //array of argv
+int		is_duplicates(t_list *list)
 {
-	int i;
-	int j;
-	int test;
+	int			curr;
+	t_node		*node;
+	t_node		*tmp;
 
-	i = 1;
-	while (i < ac)
+	if (!list)
+		return (0);
+	node = list->head;
+	tmp = list->head;
+	curr = node->data;
+	while (tmp)
 	{
-		test = ft_atoi(av[i]);
-		j = i;
-		while (j < ac - 1)
+		node = tmp;
+		curr = tmp->data;
+		while (node->next)
 		{
-			if (test == ft_atoi(av[j + 1]))
+			if (curr == node->next->data)
 				return (1);
-			j++;
+			node = node->next;
 		}
-		i++;
+		tmp = tmp->next;
 	}
 	return (0);
 }
@@ -57,16 +61,17 @@ void	error(void)
 	exit(1);
 }
 
-int		error_check(char **argv)
+int		error_check(int argc, char **argv, t_list *list)
 {
-	// if ((is_duplicates(argc, argv)) == 1)
-	// 	error();
+	if ((is_duplicates(list) == 1))
+		error();
+	argv++;
 	while (*argv)
 	{
 		if (ft_atol(*argv) > 2147483647 || ft_atol(*argv) < -2147483647)
 			return (0);
 		if ((is_not_digit(*argv)) == 1)
-			return(0);
+			return (0);
 		argv++;
 	}
 }

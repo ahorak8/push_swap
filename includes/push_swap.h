@@ -38,7 +38,8 @@ t_list	*get_args(int len, char **argv);
 
 void	receive_instructions(t_list *list_a, t_list *list_b);
 void	error(void);
-int		error_check(char **argv);
+void	free_list(t_list *list);
+int		error_check(int argc, char **argv, t_list *list);
 
 void	pa(t_list *list_a, t_list *list_b);
 void	pb(t_list *list_b, t_list *list_a);
@@ -73,6 +74,6 @@ void	algos_len5(int len, t_list *list_a, t_list *list_b);
 
 void	algos_small(int len, t_list *list_a, t_list *list_b);
 void	algos_med(int len, t_list *list_a, t_list *list_b);
-// void	algos_large(int len, t_list *list_a, t_list *list_b);
+void	algos_large(int len, t_list *list_a, t_list *list_b);
 
 #endif

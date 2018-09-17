@@ -18,7 +18,8 @@ FLAGS = -Wall -Werror -Wextra -I includes -g
 SRCS_1 = srcs/checker.c \
 		srcs/push.c srcs/swap.c srcs/rotate.c srcs/reverse_rotate.c \
 		srcs/is_sorted.c srcs/receive_instructions.c \
-		srcs/print_list.c srcs/get_args.c srcs/error_check.c 
+		srcs/print_list.c srcs/get_args.c srcs/error_check.c \
+		srcs/algos_tools_free.c
 
 SRCS_2 = srcs/push_swap.c \
 		srcs/push.c srcs/swap.c srcs/rotate.c srcs/reverse_rotate.c \
@@ -28,6 +29,7 @@ SRCS_2 = srcs/push_swap.c \
 		c srcs/algos_tools.c srcs/algos_tools_length.c \
 		srcs/algos_tools_identifier.c srcs/algos_tools_large.c \
 		srcs/error_check.c srcs/is_sorted.c srcs/get_args.c \
+		srcs/algos_tools_free.c 
 
 OBJ_1 = $(SRCS_1:.c=.o)
 OBJ_2 = $(SRCS_2:.c=.o)
