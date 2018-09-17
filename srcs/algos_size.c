@@ -6,7 +6,7 @@
 /*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/25 14:53:00 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/17 16:37:26 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 17:21:50 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	algos_small(int len, t_list *list_a, t_list *list_b)
 	len2 = 0;
 	while (len > 3)
 	{
-
 		algos_smallest_first(len, list_a);
 		pb_print(list_a, list_b);
 		len--;

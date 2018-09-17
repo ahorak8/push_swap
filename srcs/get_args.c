@@ -6,7 +6,7 @@
 /*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/07 18:25:16 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/17 13:12:47 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 17:19:05 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ t_list		*get_args(int len, char **argv)
 
 	i = 0;
 	ret = ft_list_new();
-
 	while (++i < len)
 	{
 		j = -1;

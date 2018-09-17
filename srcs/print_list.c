@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/07 17:41:32 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/07 17:41:44 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 17:17:04 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ void	list_print(t_list *list)
 	if (list != NULL)
 	{
 		temp = list->head;
-		while(temp)
+		while (temp)
 		{
 			ft_putnbr(temp->data);
 			if (temp->next != NULL)
 				ft_putstr(" - ");
-			temp = temp ->next;
+			temp = temp->next;
 		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/06 19:41:01 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/17 17:00:04 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 17:48:53 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,21 @@ void	move_to_top(int size, int len, int position, t_list *list)
 					ra_print(list);
 				len++;
 			}
+		}
+	}
+}
+
+void	move_list_b_to_a(t_list *list_a, t_list *list_b)
+{
+	t_node *tmp;
+
+	tmp = list_b->head;
+	if (tmp)
+	{
+		while (tmp)
+		{
+			pa_print(list_a, list_b);
+			tmp = tmp->next;
 		}
 	}
 }
