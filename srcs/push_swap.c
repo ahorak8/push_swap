@@ -6,7 +6,7 @@
 /*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 15:25:54 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/17 13:32:14 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 17:08:47 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,9 @@ int		main(int argc, char **argv)
 
 	if (argc > 1)
 	{
-		list_b = ft_list_new();
-		list_a = ft_list_new();
 		list_a = get_args(argc, argv);
 		error_check(argv, list_a);
+		list_b = ft_list_new();
 		if (is_sorted(list_a, list_b))
 			exit(1);
 		else

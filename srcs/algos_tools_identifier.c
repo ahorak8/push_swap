@@ -6,7 +6,7 @@
 /*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/06 19:41:01 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/17 16:12:28 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 16:48:08 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,12 @@ int		find_smallest_pos(t_list *list)
 	int		smallest_pos;
 
 	node = list->head;
-	smallest = list->head->data;
-	smallest_pos = 1;
-	while (node != NULL)
+	smallest = find_smallest(list);
+	smallest_pos = 0;
+	while (node->data != smallest)
 	{
-		if (node->data < smallest)
-		{
-			smallest = node->data;
-			smallest_pos++;
-		}
 		node = node->next;
+		smallest_pos++;
 	}
 	return (smallest_pos);
 }
