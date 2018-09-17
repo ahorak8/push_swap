@@ -6,7 +6,7 @@
 /*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/25 14:53:00 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/17 14:48:20 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 16:37:26 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,19 +40,18 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 	len2 = 0;
 	while (len > 3)
 	{
-		{
-			algos_smallest_first(len, list_a);
-			pb_print(list_a, list_b);
-			if (is_sorted_list(list_a))
-				break ;
-		}
+		algos_smallest_first(len, list_a);
+		pb_print(list_a, list_b);
 		len--;
 		len2++;
+		if (is_sorted_list(list_a))
+			break ;
 	}
 	algos_len3(list_a);
-	while (len2 != 0) //&& list_b != NULL) 
+	while (len2 != 0)
 	{
-		pa_print(list_a, list_b);
+		while (list_b->head != NULL)
+			pa_print(list_a, list_b);
 		len2--;
 	}
 }
