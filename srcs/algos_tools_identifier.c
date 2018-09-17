@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algos_tools_identifier.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/06 19:41:01 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/06 19:41:05 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 15:10:09 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int		find_smallest_pos(t_list *list)
 
 	node = list->head;
 	smallest = find_smallest(list);
-	smallest_pos = 0;
+	smallest_pos = 1;
 	while (node->data != smallest)
 	{
 		node = node->next;

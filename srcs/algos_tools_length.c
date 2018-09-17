@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algos_tools_length.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/06 23:27:00 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/06 23:27:02 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 14:20:08 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		fifth_length(int len)
 {
 	int		fifth;
 
+	fifth = 0;
 	if (len % 5 == 0 && len)
 		fifth = len / 5;
 	else

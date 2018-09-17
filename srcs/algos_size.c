@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algos_size.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/25 14:53:00 by ahorak            #+#    #+#             */
-/*   Updated: 2018/08/27 12:53:29 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 14:48:20 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	algos_small(int len, t_list *list_a, t_list *list_b)
 	len2 = 0;
 	while (len > 3)
 	{
+
 		algos_smallest_first(len, list_a);
 		pb_print(list_a, list_b);
 		len--;
@@ -56,42 +57,30 @@ void	algos_med(int len, t_list *list_a, t_list *list_b)
 	}
 }
 
-void	algos_large(int len, t_list *list_a, t_list *list_b)
+void	algos_large(t_list *list_a, t_list *list_b)
 {
-	int		count;
-	int		returned;
-	int		len2;
-	
-	len2 = fifth_length(len);
-	count = 5;
-	returned = 0;
-	while (count != 1 && !is_sorted(list_a, list_b))
+	int		store;
+
+	while (!(is_sorted_list(list_a)) || ft_list_len(list_b) != 0)
 	{
-		algos_smallest_first_fifth(len, list_a, list_b);
-// 		count--;
-// 		// malloc error in here:
-// 		// while (list_b->head != NULL)
-// 		// {
-// 		// 	algos_biggest_first(len, list_b);
-// 		// 	pa_print(list_a, list_b);
-// 		// 	returned++;
-// 		// }
-// 		while (returned > 0)
-// 		{
-// 			pb_print(list_a, list_b);
-// 			returned--;
-// 		}
-// 	}
-// 	while (len > 3)
-// 	{
-// 		algos_smallest_first(len, list_a);
-// 		if (list_a->head != NULL)
-// 		{	
-// 			// pb_print(list_a, list_b);
-// 			len--;
-// 		}
-// 	}
-// 	algos_len3(list_a, list_b);
-	while (list_b->head != NULL)
-		pa_print(list_a, list_b);
+		if (get_first(list_a) > get_second(list_a))
+			sa_print(list_a);
+		else if (get_first(list_a) > get_last(list_a))
+			rra_print(list_a);
+		else if (get_first(list_a) < get_last(list_b))
+			pb_print(list_a, list_b);
+		else if (get_first(list_a) < get_first(list_b))
+		{
+			store = get_first(list_a);
+			ra_print(list_a);
+			while (get_first(list_b) > store)
+				pa_print(list_a, list_b);
+			rra_print(list_a);
+		}
+		else if (is_sorted_list(list_a) && \
+		get_first(list_a) > get_first(list_b) && get_first(list_b) != 0)
+			move_list_b_to_a(list_a, list_b);
+		else
+			pb_print(list_a, list_b);
+	}
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 12:11:24 by ahorak            #+#    #+#             */
-/*   Updated: 2018/08/15 16:20:40 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 13:37:31 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,5 +187,7 @@ t_list					*ft_list_new(void);
 t_list					*ft_list_append(t_list *list, int val);
 t_list					*ft_list_prepend(t_list *list, int val);
 t_list					*ft_list_del(t_list *list, t_node *node);
+
+size_t					ft_list_len(t_list *begin_list);
 
 #endif

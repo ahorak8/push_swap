@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 15:25:54 by ahorak            #+#    #+#             */
-/*   Updated: 2018/08/16 18:30:40 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 13:32:14 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,28 +30,20 @@ void	select_algos(t_list *list_a, t_list *list_b)
 	else if (len > 10 && len <= 100)
 		algos_med(len, list_a, list_b);
 	else if (len > 100)
-		algos_large(len, list_a, list_b);
+		algos_large(list_a, list_b);
 }
 
 int		main(int argc, char **argv)
 {
 	t_list	*list_a;
 	t_list	*list_b;
-	t_list	*args;
 
 	if (argc > 1)
 	{
-		list_a = get_args(argc, argv);
-		error_check(argc, argv, list_a);
-
-		list_a = ft_list_new();
 		list_b = ft_list_new();
-		argv++;
-		while (*argv)
-		{
-			list_a = ft_list_append(list_a, ft_atoi(*argv));
-			argv++;
-		}
+		list_a = ft_list_new();
+		list_a = get_args(argc, argv);
+		error_check(argv, list_a);
 		if (is_sorted(list_a, list_b))
 			exit(1);
 		else

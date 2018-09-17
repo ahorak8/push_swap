@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ahorak <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/08/22 16:57:22 by ahorak            #+#    #+#              #
-#    Updated: 2018/08/27 12:20:01 by ahorak           ###   ########.fr        #
+#    Updated: 2018/09/17 14:17:48 by ahorak           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCS_2 = srcs/push_swap.c \
 		srcs/print_op_reverserotate.c srcs/print_op_pushswap.c \
 		srcs/print_op_rotate.c srcs/print_list.c \
 		srcs/algos_size.c srcs/algos_len.c srcs/algos_backwards.c \
-		c srcs/algos_tools.c srcs/algos_tools_length.c \
+		srcs/algos_tools.c srcs/algos_tools_length.c \
 		srcs/algos_tools_identifier.c srcs/algos_tools_large.c \
 		srcs/error_check.c srcs/is_sorted.c srcs/get_args.c \
 		srcs/algos_tools_free.c 

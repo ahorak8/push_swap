@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   ft_list_len.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/16 15:47:56 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/17 13:43:54 by ahorak           ###   ########.fr       */
+/*   Created: 2018/09/17 13:35:52 by ahorak            #+#    #+#             */
+/*   Updated: 2018/09/17 14:26:48 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "includes/libft.h"
 
-int		main(int argc, char **argv)
+size_t	ft_list_len(t_list *begin_list)
 {
-	t_list	*list_a;
-	t_list	*list_b;
+	int		i;
+	t_node	*tmp;
 
-	if (argc > 1)
+	i = 0;
+	tmp = begin_list->head;
+	if (tmp)
 	{
-		list_b = ft_list_new();
-		list_a = ft_list_new();
-		list_a = get_args(argc, argv);
-		error_check(argv, list_a);
-		receive_instructions(list_a, list_b);
-		if (is_sorted(list_a, list_b))
+		while (tmp)
 		{
-			free_list(list_a);
-			write(1, "OK\n", 3);
+			i++;
+			tmp = tmp->next;
 		}
-		else
-			write(1, "KO\n", 3);
 	}
-	else
-		exit(1);
+	return (i);
 }

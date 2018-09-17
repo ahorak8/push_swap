@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   algos_tools.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/06 19:41:01 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/06 19:41:05 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 14:51:58 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,9 @@ void	move_to_top(int size, int len, int position, t_list *list)
 	{
 		if (list->head->data != size && list->tail->data == size)
 			rra_print(list);
-		else if (list->head->data != size && list->head->next->data == size \
-		&& list->head->next->next->data > list->head->data)
+		else if (list->head->data != size && list->head->next->data == size)
 			sa_print(list);
-		else if (list->head->data != size && list->tail->prev->data == size)
-		{
-			rra_print(list);
-			rra_print(list);
-		}
-		else 
+		else
 		{
 			while (list->head->data != size)
 			{

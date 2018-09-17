@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_check.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/07 18:53:09 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/07 18:53:31 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/17 13:26:31 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void	error(void)
 	exit(1);
 }
 
-int		error_check(int argc, char **argv, t_list *list)
+void	error_check(char **argv, t_list *list)
 {
 	if ((is_duplicates(list) == 1))
 		error();
@@ -69,9 +69,9 @@ int		error_check(int argc, char **argv, t_list *list)
 	while (*argv)
 	{
 		if (ft_atol(*argv) > 2147483647 || ft_atol(*argv) < -2147483647)
-			return (0);
+			error();
 		if ((is_not_digit(*argv)) == 1)
-			return (0);
+			error();
 		argv++;
 	}
 }
