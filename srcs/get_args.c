@@ -6,7 +6,7 @@
 /*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/07 18:25:16 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/17 17:19:05 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/18 15:56:26 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list		*get_args(int len, char **argv)
 		split = ft_strsplit(argv[i], ' ');
 		while (split[++j] != NULL)
 			ret = ft_list_append(ret, ft_atoi(split[j]));
-		ft_strdel(split);
+		free_array(&split);
 	}
 	return (ret);
 }

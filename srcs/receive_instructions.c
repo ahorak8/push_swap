@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   receive_instructions.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/23 19:31:37 by ahorak            #+#    #+#             */
-/*   Updated: 2018/08/23 20:26:28 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/18 15:58:45 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,9 @@ void	receive_instructions(t_list *list_a, t_list *list_b)
 	char	*str;
 
 	while (get_next_line(0, &str))
+	{
 		check_instructions(str, list_a, list_b);
+		free(str);
+	}
+	free(str);
 }

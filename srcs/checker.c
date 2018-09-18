@@ -6,7 +6,7 @@
 /*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/16 15:47:56 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/17 17:04:11 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/18 15:54:42 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		main(int argc, char **argv)
 		receive_instructions(list_a, list_b);
 		if (is_sorted(list_a, list_b))
 		{
-			free_list(list_a);
+			free_both_lists(list_a, list_b);
 			write(1, "OK\n", 3);
 		}
 		else

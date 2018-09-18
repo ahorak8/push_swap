@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahorak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 17:15:57 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/17 17:16:10 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/18 15:57:52 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ t_list	*get_args(int len, char **argv);
 void	receive_instructions(t_list *list_a, t_list *list_b);
 void	error(void);
 void	free_list(t_list *list);
+void	free_both_lists(t_list *list_a, t_list *list_b);
+void	free_array(char ***stack);
 void	error_check(char **argv, t_list *list);
 
 void	pa(t_list *list_a, t_list *list_b);
