@@ -6,7 +6,7 @@
 /*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/23 19:31:37 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/18 15:58:45 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/18 16:40:53 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,4 @@ void	receive_instructions(t_list *list_a, t_list *list_b)
 		check_instructions(str, list_a, list_b);
 		free(str);
 	}
-	free(str);
 }
