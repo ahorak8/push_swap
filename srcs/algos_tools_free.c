@@ -6,7 +6,7 @@
 /*   By: ahorak <ahorak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/17 12:40:19 by ahorak            #+#    #+#             */
-/*   Updated: 2018/09/18 15:57:25 by ahorak           ###   ########.fr       */
+/*   Updated: 2018/09/18 16:09:15 by ahorak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	free_list(t_list *list)
 {
-    t_node  *current;
+	t_node	*current;
 
-    current = list->head;
-    if (current == NULL)
-        free(current);
-    else
-    {
-        while (current != NULL)
-        {
-            free(current);
-            current = current->next;
-        }
+	current = list->head;
+	if (current == NULL)
+		free(current);
+	else
+	{
+		while (current != NULL)
+		{
+			free(current);
+			current = current->next;
+		}
 	}
 	free(list);
 }
